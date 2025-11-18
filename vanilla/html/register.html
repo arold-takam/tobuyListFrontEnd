@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TobuyList/Register You</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <header>
+        <a href="../html/landingPage.html" class="linkPage"><img src="../ressources/images/imgLogo.png" alt="logo icon"></a>
+        <div class="authCta">
+            <a href="../html/login.html" class="login">CONNECTION</a>
+        </div>
+    </header>
+    <div class="main">
+        <h1>ToBuyList</h1>
+        <span class="description">Inscrivez-vous pour une meilleure gestion financière.</span>
+        <section class="onboarding">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+            <div class="errorTracker">Aucune info détectée pour l'instant.</div>
+        </section>
+        <form class="registerForm">
+            <div class="put">
+                <label for="fullName">Entrez votre nom</label>
+                <input type="text" name="fullName" id="fullName" class="fullName" required>
+            </div>
+            <div class="put">
+                <label for="userName">Entrez votre nom d'utilisateur</label>
+                <input type="text" name="userName" id="userName" class="userName" required>
+            </div>
+            <div class="put">
+                <label for="mail">Entrez votre adresse mail</label>
+                <input type="email" name="mail" id="mail" class="mail" required>
+            </div>
+            <div class="put">
+                <label for="pass">Entrez votre mot de pass</label>
+                <input type="password" name="pass" id="pass" class="pass" required>
+            </div>
+            <button type="submit" class="send">S'INSCRIRE</button>
+            <a href="../html/transactionSuccess.html" style="color: white; font-size: larger;">SUCCESS</a>
+        </form>
+        <section class="meetUs">
+            <div class="callZone">
+                <h4>OU</h4>
+                <a href="../html/login.html" class="login">connection</a>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; Copyright 2025, TobuyList; Tout droits reservé.</p>
+        </footer>
+    </div>
+</body>
+</html>
