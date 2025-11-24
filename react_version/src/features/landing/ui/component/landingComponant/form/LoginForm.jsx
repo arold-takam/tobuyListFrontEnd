@@ -5,7 +5,7 @@ import {useNavigate} from "react-router-dom";
 
 export default function LoginForm() {
     const {loading, error, login, successMsg} = UseLogin();
-    const [formData, setFormData] = useState({id:"user1", username:"", password:""});
+    const [formData, setFormData] = useState({username:"", password:""});
 
     const navigate = useNavigate();
     useEffect(() => {
@@ -24,7 +24,7 @@ export default function LoginForm() {
     const handleChange = (e) => {
         setFormData({
             ...formData,
-            [e.target.name]: e.target.value,
+            [e.target.name]: e.target.value
         });
     };
 

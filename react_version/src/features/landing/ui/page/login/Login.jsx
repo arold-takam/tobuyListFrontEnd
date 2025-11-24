@@ -14,7 +14,6 @@ export default function Login() {
                 <h1>ToBuyList</h1>
                 <span className="description">Connectez-vous pour une meilleure gestion financière.</span>
                 <LoginForm />
-                {/*<Link to="/success" style={{color: "white", fontSize: "larger"}}>SUCCESS</Link>*/}
                 <section className="meetUs">
                     <div className="callZone">
                         <h4>OU</h4>

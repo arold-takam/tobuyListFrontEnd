@@ -1,38 +1,38 @@
-import * as apiLogin from "../infrastructure/LoginService.js";
 import {useState} from "react";
-import {buildLogin} from "../domain/login/loginModel.js";
+import * as apiRegister from "../infrastructure/RegisterService.js";
+import {buildClient} from "../domain/register/registerModel.js";
 import {useAuth} from "../../../contextGlobal/authContext/useAuth.js";
 
-export default function UseLogin() {
+export default function UseRegistration() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-//     ----------------------------------------------------------------------------------
+//     ---------------------------------------------------------------
     const [successMsg, setSuccessMsg] = useState(null);
 
     const {setAuthenticatedUser} = useAuth();
 
-    const login = async (loginInfo) => {
+    const register = async (registerData) => {
         setLoading(true);
         setError(null);
         setSuccessMsg(null);
 
         try {
-            let model = buildLogin(loginInfo);
+            let model = buildClient(registerData);
 
-            const res = await apiLogin.login(model);
+            const res = await apiRegister.register(model);
 
             setAuthenticatedUser(res);
 
             setSuccessMsg({
-                message: "Login succeed !",
+                message: "Registering succeed !",
                 user: res
             });
 
-            console.log("login success");
+            console.log("Register success");
         } catch (err) {
             setError(err.message);
-            console.log("Login not found." + err.message);
+            console.log("Registration failed." + err.message);
         } finally {
             setLoading(false);
         }
@@ -41,7 +41,7 @@ export default function UseLogin() {
     return {
         loading,
         error,
-        login,
-        successMsg
+        register,
+        successMsg,
     };
 }

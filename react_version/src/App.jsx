@@ -1,9 +1,9 @@
 import './App.css'
 import {Route, Routes} from "react-router-dom";
-import HomeLanding from "./features/landingPage/ui/page/lading/HomeLanding.jsx";
-import Register from "./features/landingPage/ui/page/register/Register.jsx";
-import Login from "./features/landingPage/ui/page/login/Login.jsx";
-import SuccessPage from "./features/landingPage/ui/page/successPage/SuccessPage.jsx";
+import HomeLanding from "./features/landing/ui/page/landingPage/HomeLanding.jsx";
+import Register from "./features/landing/ui/page/register/Register.jsx";
+import Login from "./features/landing/ui/page/login/Login.jsx";
+import SuccessPage from "./features/landing/ui/page/successPage/SuccessPage.jsx";
 import Home from "./features/wallet/ui/page/home/Home.jsx";
 
 function App() {
