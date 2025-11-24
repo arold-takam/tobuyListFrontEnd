@@ -21,6 +21,7 @@ export default function Login() {
                     <div className="errorTracker">Aucune info détectée pour l'instant.</div>
                 </section>
                 <LoginForm />
+                <Link to="/succes" style={{color: "white", fontSize: "larger"}}>SUCCESS</Link>
                 <section className="meetUs">
                     <div className="callZone">
                         <h4>OU</h4>
