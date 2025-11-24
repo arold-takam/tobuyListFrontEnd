@@ -2,13 +2,22 @@ import './App.css'
 import {Route, Routes} from "react-router-dom";
 import HomeLanding from "./features/landingPage/ui/page/lading/HomeLanding.jsx";
 import Register from "./features/landingPage/ui/page/register/Register.jsx";
+import Login from "./features/landingPage/ui/page/login/Login.jsx";
+import SuccessPage from "./features/landingPage/ui/page/successPage/SuccessPage.jsx";
+import Home from "./features/wallet/ui/page/home/Home.jsx";
 
 function App() {
 
   return (
       <Routes>
+          {/*Routes about landing page*/}
           <Route path="/" element={<HomeLanding />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/success" element={<SuccessPage />} />
+
+          {/*Routes about wallet */}
+          <Route path="/home" element={<Home />} />
       </Routes>
   )
 }

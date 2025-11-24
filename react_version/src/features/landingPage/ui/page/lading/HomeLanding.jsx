@@ -55,7 +55,7 @@ export default function HomeLanding() {
                 <section className="meetUs">
                     <h2>Alors Rejoignez-nous !</h2>
                     <div className="callZone">
-                        <a href="#" className="login">CONNECTION</a>
+                        <Link to="/login" className="login">CONNECTION</Link>
                         <h4>OU</h4>
                         <Link to="/register" href="#" className="register">INSCRIPTION</Link>
                     </div>
