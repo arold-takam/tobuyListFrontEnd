@@ -1,14 +1,16 @@
 import * as apiLogin from "../infrastructure/LoginService.js";
 import {useState} from "react";
 import {buildLogin} from "../domain/login/loginModel.js";
+import {useAuth} from "../../../contextGlobal/authContext/useAuth.js";
 
 export default function UseLogin() {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
 
-//     ------------------------------------------------------------------------------------
-    const [loginInfo, setLoginInfo] = useState(null);
+//     ----------------------------------------------------------------------------------
     const [successMsg, setSuccessMsg] = useState(null);
+
+    const {setAuthenticatedUser} = useAuth();
 
     const login = async (loginInfo) => {
         setLoading(true);
@@ -19,7 +21,8 @@ export default function UseLogin() {
             let model = buildLogin(loginInfo);
 
             const res = await apiLogin.login(model);
-            setLoginInfo(res);
+
+            setAuthenticatedUser(res);
 
             setSuccessMsg({
                 message: "Login succeed !",
@@ -38,7 +41,6 @@ export default function UseLogin() {
     return {
         loading,
         error,
-        loginInfo,
         login,
         successMsg
     };

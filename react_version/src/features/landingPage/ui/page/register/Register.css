@@ -5,7 +5,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: max-content;
+    height: 100dvh;
     background: radial-gradient(53.8% 72.78% at 50% 50%, #002aff 0%, #000000 100%);
     scroll-behavior: smooth;
 
@@ -35,56 +35,6 @@
             color: var(--whiteColor);
             font-size: large;
             text-align: center;
-        }
-
-        & .onboarding{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: .5rem;
-            width: 100%;
-
-            & ul{
-                display: flex;
-                align-items: center;
-                justify-content: space-evenly;
-                width: 100%;
-
-                & li{
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    width: 3rem;
-                    aspect-ratio: 4/4;
-                    background-color: var(--blackColor);
-                    border: 2px solid var(--mainColor);
-                    border-radius: 50%;
-                    color: var(--whiteColor);
-                    font-size: x-large;
-                    text-align: center;
-                }
-                & .activeSuccess{
-                    background-color: var(--mainColor);
-                    color: var(--whiteColor);
-                    font-weight: bold;
-                }
-                & .activeFail{
-                    background-color: var(--blackColor);
-                    color: var(--whiteColor);
-                    font-weight: bold;
-                }
-            }
-
-            & .errorTracker{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: var(--whiteColor);
-                font-size: large;
-                font-weight: lighter;
-                /*padding: 1rem;*/
-                text-align: center;
-            }
         }
 
         & .registerForm{
@@ -219,23 +169,6 @@
         & .main{
             gap: 2rem;
             height: auto;
-
-            & .onboarding{
-                position: fixed;
-                top: 16rem;
-                left: 4rem;
-                flex-direction: column-reverse;
-                width: 20%;
-
-                & ul{
-                    flex-direction: column;
-                    gap: 2rem;
-
-                    & li{
-                        width: 5rem;
-                    }
-                }
-            }
 
             & .registerForm{
                 gap: 3rem;

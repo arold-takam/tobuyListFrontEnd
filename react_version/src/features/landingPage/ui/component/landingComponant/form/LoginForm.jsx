@@ -4,7 +4,7 @@ import {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
 
 export default function LoginForm() {
-    const {loading, error, loginInfo, login, successMsg} = UseLogin();
+    const {loading, error, login, successMsg} = UseLogin();
     const [formData, setFormData] = useState({id:"user1", username:"", password:""});
 
     const navigate = useNavigate();
