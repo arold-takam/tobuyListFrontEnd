@@ -1,5 +1,4 @@
 import './Home.css';
-import {Link} from "react-router-dom";
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import {useState} from "react";
 
@@ -12,7 +11,7 @@ import InfoList from "../../componant/homeComp/InfoList.jsx";
 
 
 export default function Home() {
-    const {isAuthenticated} = useAuth();
+    const {isAuthenticated, user} = useAuth();
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
@@ -32,9 +31,17 @@ export default function Home() {
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
             <main>
-                <CardSide />
-                <Link to={"/"}>Go to landing page</Link>
-                <TransactList />
+                {user.roleName === 'ADMIN' ?
+                    <div className="adminSide">
+                        <h1>Welcome dear Admin</h1>
+                        <p>You can access to manage panel in your profile page.</p>
+                    </div>
+                    :
+                    <div className="clientSide">
+                        <CardSide />
+                        <TransactList />
+                    </div>
+                }
                 <InfoList />
                 <BottomHeader />
             </main>
