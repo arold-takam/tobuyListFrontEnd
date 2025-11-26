@@ -10,7 +10,8 @@ export default function RegisterForm() {
         name: "",
         username: "",
         mail: "",
-        password: ""
+        password: "",
+        roleName: "CLIENT"
     })
 
     const navigate = useNavigate();

@@ -11,6 +11,7 @@ export function buildClient(registerData) {
         name: registerData.name,
         username: registerData.username,
         mail: registerData.mail,
-        password: registerData.password
+        password: registerData.password,
+        roleName: registerData.roleName,
     };
 }

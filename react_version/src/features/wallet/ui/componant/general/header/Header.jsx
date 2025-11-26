@@ -1,4 +1,5 @@
 import {Link} from "react-router-dom";
+import './Header.css';
 
 import notifications from "../../../../../../assets/images/notifications.png";
 import imgLogo from "../../../../../../assets/images/imgLogo.png";

@@ -5,6 +5,7 @@ import Register from "./features/landing/ui/page/register/Register.jsx";
 import Login from "./features/landing/ui/page/login/Login.jsx";
 import SuccessPage from "./features/landing/ui/page/successPage/SuccessPage.jsx";
 import Home from "./features/wallet/ui/page/home/Home.jsx";
+import Profile from "./features/wallet/ui/page/profile/Profile.jsx";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
 
           {/*Routes about wallet */}
           <Route path="/home" element={<Home />} />
+          <Route path={`/profile`} element={<Profile />} />
       </Routes>
   )
 }

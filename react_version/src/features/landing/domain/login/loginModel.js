@@ -7,7 +7,6 @@ export function buildLogin(loginData) {
     }
 
     return {
-        id: loginData.id,
         username: loginData.username,
         password: loginData.password,
     };

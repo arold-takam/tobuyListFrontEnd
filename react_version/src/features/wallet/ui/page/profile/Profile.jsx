@@ -1,18 +1,19 @@
-import './Home.css';
-import {Link} from "react-router-dom";
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import {useState} from "react";
+import './Profile.css';
 
 import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
 import Header from "../../componant/general/header/Header.jsx";
 import BottomHeader from "../../componant/general/bottomHeader/BottomHeader.jsx";
-import CardSide from "../../componant/homeComp/CardSide.jsx";
-import TransactList from "../../componant/homeComp/TransactList.jsx";
-import InfoList from "../../componant/homeComp/InfoList.jsx";
 
+import HeroProfile from "../../componant/profileComp/HeroProfile.jsx";
+import InfoLine from "../../componant/profileComp/InfoLine.jsx";
+import LogoutBtn from "../../componant/profileComp/LogoutBtn.jsx";
+import AccountZone from "../../componant/profileComp/AccountZone.jsx";
+import ManageZone from "../../componant/profileComp/ManageZone.jsx";
 
-export default function Home() {
-    const {isAuthenticated} = useAuth();
+export default function Profile() {
+    const {isAuthenticated, user} = useAuth();
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
@@ -28,14 +29,14 @@ export default function Home() {
     }
 
     return (
-        <div className={`home`}>
+        <div className="profile">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
             <main>
-                <CardSide />
-                <Link to={"/"}>Go to landing page</Link>
-                <TransactList />
-                <InfoList />
+                <HeroProfile user={user} />
+                <InfoLine user={user} />
+                {user.roleName === "CLIENT" ? <AccountZone /> : <ManageZone />}
+                <LogoutBtn />
                 <BottomHeader />
             </main>
         </div>
