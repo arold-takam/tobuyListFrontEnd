@@ -6,6 +6,7 @@ import Login from "./features/landing/ui/page/login/Login.jsx";
 import SuccessPage from "./features/landing/ui/page/successPage/SuccessPage.jsx";
 import Home from "./features/wallet/ui/page/home/Home.jsx";
 import Profile from "./features/wallet/ui/page/profile/Profile.jsx";
+import History from "./features/wallet/ui/page/history/History.jsx";
 import MAccountPage from "./features/moneyAccount/ui/page/mAccountPage/MAccountPage.jsx";
 
 function App() {
@@ -21,6 +22,8 @@ function App() {
           {/*Routes about wallet */}
           <Route path="/home" element={<Home />} />
           <Route path={`/profile`} element={<Profile />} />
+          <Route path={`/history`} element={<History />} />
+
 
           {/*Routes about money accounts*/}
           <Route path="/moneyAccount" element={<MAccountPage />} />

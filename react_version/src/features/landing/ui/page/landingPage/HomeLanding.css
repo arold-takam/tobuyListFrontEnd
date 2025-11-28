@@ -281,7 +281,7 @@
                         border: 1px solid var(--whiteColor);
                     }
                 }
-                & .register{
+                & .register1{
                     border: 2px solid var(--mainColor);
                     color: var(--mainColor);
                     transition: all 1s ease;

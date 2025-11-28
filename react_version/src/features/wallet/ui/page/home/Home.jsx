@@ -11,13 +11,13 @@ import InfoList from "../../componant/homeComp/InfoList.jsx";
 
 
 export default function Home() {
+
+    const [activeMenu, setActiveMenu] = useState("");
     const {isAuthenticated, user} = useAuth();
+
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
-
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [activeMenu, setActiveMenu] = useState("");
 
     const handleMainMenu = () => {
         setActiveMenu("active");

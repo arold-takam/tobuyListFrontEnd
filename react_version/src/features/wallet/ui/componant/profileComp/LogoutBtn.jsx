@@ -1,24 +1,13 @@
-import BottomHeader from "../general/bottomHeader/BottomHeader.jsx";
-
 import logoutIcon from '../../../../../assets/images/logout.png';
-import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
-import {useNavigate} from "react-router-dom";
+import useLogout from "../../../infrastructure/LogoutService.js";
 
 export default function LogoutBtn(){
-    const {logout} = useAuth();
-    const navigate = useNavigate();
 
-    const handleLogout = () => {
-        setTimeout(()=>{
-            logout();
-
-            navigate('/');
-        }, 300);
-    }
+    const logout = useLogout();
 
     return (
         <section className="logout">
-            <a onClick={handleLogout}>
+            <a onClick={logout}>
                 <p>DÉCONNEXION</p>
                 <img src={logoutIcon} alt="logout icon"/>
             </a>

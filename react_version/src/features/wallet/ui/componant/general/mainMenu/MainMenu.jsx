@@ -12,14 +12,18 @@ import x from '../../../../../../assets/images/x.png';
 import linkedIn from '../../../../../../assets/images/linkedIn.png';
 import youtube from '../../../../../../assets/images/youtube.png';
 import settings from '../../../../../../assets/images/settings.png';
-import logout from '../../../../../../assets/images/logout.png';
+import logoutImg from '../../../../../../assets/images/logout.png';
 import lightTheme from '../../../../../../assets/images/light.png';
 import dark from '../../../../../../assets/../assets/images/dark.png';
 import gift from '../../../../../../assets/../assets/images/gift.png';
 import menuClose from '../../../../../../assets/images/menuClose.png';
 import ratioUp from '../../../../../../assets/images/ratioUp.png';
+import useLogout from "../../../../infrastructure/LogoutService.js";
 
 export default function MainMenu({activeMenu, handleMenuClose}) {
+
+    const logout = useLogout();
+
     return (
         <section className={`${activeMenu} mainMenu`}>
             <div className="top">
@@ -47,8 +51,8 @@ export default function MainMenu({activeMenu, handleMenuClose}) {
                     <figure className="set"><img src={settings} alt="settings"/></figure>
                     <p>Paramètres</p>
                 </a>
-                <a href="#" className="logout">
-                    <figure className="logout"><img src= {logout} alt="logout"/></figure>
+                <a href="#" className="logout" onClick={logout}>
+                    <figure className="logout"><img src= {logoutImg} alt="logout"/></figure>
                     <p>Logout</p>
                 </a>
                 <div className="theme">

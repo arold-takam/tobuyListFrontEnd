@@ -13,13 +13,14 @@ import AccountZone from "../../componant/profileComp/AccountZone.jsx";
 import ManageZone from "../../componant/profileComp/ManageZone.jsx";
 
 export default function Profile() {
+
+    const [activeMenu, setActiveMenu] = useState("");
     const {isAuthenticated, user} = useAuth();
+
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [activeMenu, setActiveMenu] = useState("");
 
     const handleMainMenu = () => {
         setActiveMenu("active");

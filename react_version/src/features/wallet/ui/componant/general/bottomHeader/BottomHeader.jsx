@@ -1,4 +1,4 @@
-import {Link} from "react-router-dom";
+import {NavLink} from "react-router-dom";
 import './BottomHeader.css';
 
 import accueil from '../../../../../../assets/images/accueil.png';
@@ -10,10 +10,10 @@ export default function BottomHeader(){
     return(
         <section className="bottomHeader">
             <ul>
-                <li><Link to={`/home`} className="active"><img src={accueil} alt="home"/></Link></li>
-                <li><a href="./html/story.html"><img src={story} alt="story"/></a></li>
-                <li><Link to={`/profile`}><img src={userProfile} alt="profile"/></Link></li>
-                <li><a href="#"><img src={assistante} alt="client assistance"/></a></li>
+                <li><NavLink to={`/home`} className={({ isActive }) => isActive ? 'active' : '' }><img src={accueil} alt="home"/></NavLink></li>
+                <li><NavLink to={"/history"} className={({ isActive }) => isActive ? 'active' : '' }><img src={story} alt="story"/></NavLink></li>
+                <li><NavLink to={`/profile`} className={({ isActive }) => isActive ? 'active' : '' }><img src={userProfile} alt="profile"/></NavLink></li>
+                <li><NavLink to={''} className={({ isActive }) => isActive ? 'active' : '' }><img src={assistante} alt="client assistance"/></NavLink></li>
             </ul>
         </section>
     );
