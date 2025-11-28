@@ -29,7 +29,7 @@ function saveUsers(users) {
 
 // ------------------------------
 
-export async function register(registerData) {
+export function register(registerData) {
     return new Promise((resolve) => {
         setTimeout(()=>{
             const userList = loadUsers();

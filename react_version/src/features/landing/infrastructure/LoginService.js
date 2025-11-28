@@ -7,7 +7,7 @@ function loadClients() {
     return clients ? JSON.parse(clients) : [];
 }
 
-export async function login(loginData) {
+export function login(loginData) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             const clientList = loadClients();

@@ -3,7 +3,6 @@ import {useEffect} from "react";
 import './MAccountPage.css';
 
 import eyeOpen from '../../../../../assets/images/eyeOpen.png';
-import eyecloed from '../../../../../assets/images/eyeClosed.png';
 import updateIcon from '../../../../../assets/images/Crayon.png';
 import deleteIcon from '../../../../../assets/images/delete.png';
 import Header from "../../../../wallet/ui/componant/general/header/Header.jsx";
