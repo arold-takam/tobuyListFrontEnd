@@ -13,10 +13,10 @@ export default function TransactList () {
                     <figure><img src={Tirelire || ""} alt="deposit"/></figure>
                     <button type="button" className="depositBtn">DEPOT</button>
                 </Link>
-                <a href="./html/transfert.html" className="opp">
+                <Link to={'/transfer'} className="opp">
                     <figure><img src={transfert} alt="transfert"/></figure>
                     <button type="button" className="transfertBtn">TRANSFERT</button>
-                </a>
+                </Link>
                 <a href="./html/borrow.html" className="opp">
                     <figure><img src={pret} alt="borrow"/></figure>
                     <button type="button" className="borrowBtn">PRÊT</button>

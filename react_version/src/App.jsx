@@ -10,6 +10,7 @@ import History from "./features/wallet/ui/page/history/History.jsx";
 import MAccountPage from "./features/moneyAccount/ui/page/mAccountPage/MAccountPage.jsx";
 import Success from "./features/wallet/ui/page/successPage/Success.jsx";
 import Deposit from "./features/wallet/ui/page/deposit/Deposit.jsx";
+import Transfer from "./features/wallet/ui/page/transfer/Transfer.jsx";
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
           <Route path={`/history`} element={<History />} />
           <Route path={`/successTransaction`} element={<Success />} />
           <Route path={'/deposit'} element={<Deposit />} />
-
+          <Route path={'/transfer'} element={<Transfer />} />
 
           {/*Routes about money accounts*/}
           <Route path="/moneyAccount" element={<MAccountPage />} />
