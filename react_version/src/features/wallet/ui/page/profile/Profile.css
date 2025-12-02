@@ -211,8 +211,8 @@
                         align-items: center;
                         justify-content: space-between;
                         width: 100%;
-                        font-size: larger;
-                        font-weight: bold;
+                        font-size: large;
+                        font-weight: 570;
 
                         & a{
                             position: relative;
@@ -234,10 +234,10 @@
                                 display: flex;
                                 align-items: center;
                                 justify-content: center;
-                                width: 3rem;
+                                width: 2rem;
                                 aspect-ratio: 4/4;
                                 background-color: var(--mainColor);
-                                border-radius: 50%;
+                                border-radius: .5rem;
 
                                 & img{
                                     width: 80%;

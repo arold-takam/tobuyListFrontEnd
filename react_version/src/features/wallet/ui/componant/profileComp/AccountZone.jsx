@@ -1,23 +1,44 @@
 import addIcon from '../../../../../assets/images/addIcon.png';
-import mtnIcon from '../../../../../assets/images/mtnMomo.webp';
-import orangeIcon from '../../../../../assets/images/orangeOM.webp';
-import paypalIcon from '../../../../../assets/images/paypal.webp';
+
 import AccountItem from "./AccountItem.jsx";
+import UseMaLoading from "../../../../moneyAccount/application/UseMaLoading.js";
+import {Link} from "react-router-dom";
+
+
 
 export default function AccountZone() {
+    const {loading, error, accounts} = UseMaLoading();
+
+    if (loading) {
+        return <section className={`accountZone`}><p>Money accounts loading...</p></section>
+    }
+
+    if (error) {
+        return <section className={`accountZone`}><p style={{color: 'red'}}>Money accounts loading rise an error: {error}</p></section>
+    }
+
+    if (accounts.length === 0) {
+        return (
+            <section className={`accountZone`}>
+                <div className="top"><h2>Money Accounts</h2>....</div>
+                <div className="account"><p>No stored money account yet.</p></div>
+            </section>
+        )
+    }
+
     return(
         <section className="accountZone">
             <div className="top">
                 <h2>Comptes Externes</h2>
-                <a href="#" className="addBtn">
+                <Link to={"/formAddMoneyAccount"} className="addBtn">
                     <figure><img src={addIcon} alt="add button"/></figure>
-                </a>
+                </Link>
             </div>
             <div className="account">
                 <ul>
-                    <AccountItem key = {`1`} imgIcon={mtnIcon} number={`+237 650 656 554`} />
-                    <AccountItem key = {`2`} imgIcon={paypalIcon} number={`645 454 545`} />
-                    <AccountItem key = {`3`} imgIcon={orangeIcon} number={`+237 690 655 879`} />
+                    {accounts.map(account => (
+                        <AccountItem key = {account.id} account = {account} />
+                    ))}
                 </ul>
                 <button type="button" className="seeMore">Voir Plus</button>
             </div>

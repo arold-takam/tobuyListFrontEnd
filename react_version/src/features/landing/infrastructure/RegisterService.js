@@ -11,7 +11,7 @@ function saveUsers(users) {
     localStorage.setItem(CLIENT_STORAGE_KEY, JSON.stringify(users));
 }
 
-// SIMULATION ADMIN REGISTER-----------------------------
+// ADMIN REGISTER SIMULATION-----------------------------
     const admin = {
         id : 0,
         name : "toto",

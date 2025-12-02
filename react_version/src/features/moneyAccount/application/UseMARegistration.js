@@ -1,35 +1,34 @@
-import * as apiRegister from "../infrastructure/RegisterService.js";
+import * as apiRegistration from '../infrastructure/MARegisterService.js';
 import {useState} from "react";
-import {buildClient} from "../domain/register/registerModel.js";
 import {useAuth} from "../../../contextGlobal/authContext/useAuth.js";
+import {buildMoneyAccount} from "../domain/maModel.js";
 
-export default function UseRegistration() {
+export default function UseMARegistration(){
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(null);
     const [successMsg, setSuccessMsg] = useState(null);
 
 //     ---------------------------------------------------------------
-    const {setAuthenticatedUser} = useAuth();
+    const {user} = useAuth();
 
-    const register = async (registerData) => {
+    const register = async (maData) => {
         setLoading(true);
         setError(null);
         setSuccessMsg(null);
 
         try {
-            let model = buildClient(registerData);
+            let model = buildMoneyAccount(maData);
+            model.clientId = user.id;
 
-            const res = await apiRegister.register(model);
-
-            setAuthenticatedUser(res);
+            const res = await apiRegistration.register(model);
 
             setSuccessMsg({
-                message: "Registering succeed !",
-                user: res
+                message: "MA create successfully !",
+                mAccount: res
             });
 
-            console.log("Register success");
-        } catch (err) {
+            console.log("Money account creation success");
+        }catch (err) {
             setError(err.message);
             console.log("Registration failed." + err.message);
         } finally {
@@ -37,10 +36,10 @@ export default function UseRegistration() {
         }
     }
 
-    return {
+    return{
         loading,
         error,
         register,
-        successMsg,
+        successMsg
     };
 }

@@ -2,13 +2,16 @@ import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import './MAccountPage.css';
 
-import eyeOpen from '../../../../../assets/images/eyeOpen.png';
-import updateIcon from '../../../../../assets/images/Crayon.png';
-import deleteIcon from '../../../../../assets/images/delete.png';
 import Header from "../../../../wallet/ui/componant/general/header/Header.jsx";
 import BottomHeader from "../../../../wallet/ui/componant/general/bottomHeader/BottomHeader.jsx";
 import MainMenu from "../../../../wallet/ui/componant/general/mainMenu/MainMenu.jsx";
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
+
+import updateIcon from '../../../../../assets/images/Crayon.png';
+import deleteIcon from '../../../../../assets/images/delete.png';
+import eyeOpen from '../../../../../assets/images/eyeOpen.png';
+import eyeClose from '../../../../../assets/images/eyeClosed.png';
+
 
 export default function MAccountPage() {
     const {isAuthenticated} = useAuth();
@@ -18,6 +21,12 @@ export default function MAccountPage() {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const [activeMenu, setActiveMenu] = useState("");
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [passVisible, setPassVisible] = useState(false);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [priceVisible, setPriceVisible] = useState(false);
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const [cardColor, setCardColor] = useState(' ');
 
     const handleMainMenu = () => {
         setActiveMenu("active");
@@ -26,14 +35,32 @@ export default function MAccountPage() {
         setActiveMenu("");
     }
 
+    const handlePassShowing = () =>{
+        setPassVisible(!passVisible);
+    }
+    const handlePriceShowing = () =>{
+        setPriceVisible(!priceVisible);
+    }
+
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation();
-    const {imgIcon, number} = location.state || {};
+    const {account} = location.state || {};
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
-        console.log(imgIcon, number);
-    }, [imgIcon, number]);
+        console.log(account);
+    }, [account]);
+
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        if (account.name === 'MTN_Mobile_Money') {
+            setCardColor('#FFCA06');
+        } else if (account.name === 'PayPal') {
+            setCardColor('#0096DA');
+        } else if (account.name === 'Orange_Money') {
+            setCardColor('#F08012');
+        }
+    }, [account.name]);
 
     return (
             <div className="mAccountPage">
@@ -41,16 +68,16 @@ export default function MAccountPage() {
                 <Header handleMainMenu={handleMainMenu} />
                 <main>
                     <section className="upAccount">
-                        <h1>MTN</h1>
-                        <p>Mobile Money</p>
+                        <h1>{account.name}</h1>
+                        <p>Manage your money account here</p>
                     </section>
-                    <div className="card">
+                    <div className="card" style={{backgroundColor: cardColor}}>
                         <div className="top">
                             <h1>Solde actuelle</h1>
-                            <img src={eyeOpen} alt="eye"/>
+                            {priceVisible ? <img src={eyeClose} alt="eye" onClick={handlePriceShowing}/> : <img src={eyeOpen} alt="eye" onClick={handlePriceShowing}/>}
                         </div>
                         <div className="middle">
-                            <h2>* * * * *</h2>
+                            <h2>{priceVisible ? account.amount : '********'}</h2>
                             <span>FCFA</span>
                         </div>
                         <div className="bottom">
@@ -70,18 +97,18 @@ export default function MAccountPage() {
                             <ul>
                                 <li>
                                     <p>Name</p>
-                                    <b>MTN Mobile Money</b>
+                                    <b>{account.name}</b>
                                 </li>
                                 <li>
                                     <p>Numero de compte</p>
-                                    <b>{number}</b>
+                                    <b>{account.phone}</b>
                                 </li>
                                 <li className="pass">
                                     <div className="left">
                                         <p>Password</p>
-                                        <b>********</b>
+                                        <b>{passVisible ? account.password : '*****'}</b>
                                     </div>
-                                    <div className="right"><img src={eyeOpen} alt="see button"/></div>
+                                    <div className="right" onClick={handlePassShowing}>{passVisible ? <img src={eyeClose} alt="see button"/> : <img src={eyeOpen} alt="see button"/>}</div>
                                 </li>
                             </ul>
                         </div>

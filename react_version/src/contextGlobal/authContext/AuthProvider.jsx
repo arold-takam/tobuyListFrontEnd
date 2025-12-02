@@ -2,9 +2,7 @@ import React, {useState} from "react";
 import {AuthContext} from "./useAuth.js";
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(
-        JSON.parse(localStorage.getItem('auth_user')) || null
-    );
+    const [user, setUser] = useState(JSON.parse(localStorage.getItem('auth_user')) || null);
 
     const setAuthenticatedUser = (userInfo) => {
         setUser(userInfo);
