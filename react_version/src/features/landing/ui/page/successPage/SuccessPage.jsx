@@ -17,7 +17,7 @@ export default function SuccessPage(){
                 </div>
                 <Link to="/home" state={{dataAuth: smsAuth.user}} className="cta">ALLER A LA PAGE D'ACCUEIL</Link>
                 <div className="notice">
-                    <img src={storyIcon} alt="story"/>
+                    <img src={storyIcon || ""} alt="story"/>
                     <p>Vous pouvez consulter l'historique de vos transactions pour suivre vos operations.</p>
                 </div>
             </section>
