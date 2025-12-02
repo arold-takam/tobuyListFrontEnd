@@ -1,0 +1,174 @@
+
+& .all{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--blackColor);
+    padding: 0 0.5rem;
+    z-index: 100;
+
+    & .linkPage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        & img{
+            height: 70%;
+            aspect-ratio: 4/4;
+        }
+    }
+
+    & .authCta{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        & .login, .registerBtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4rem;
+            font-size: small;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+        }
+        & .login{
+            background-color: var(--mainColor);
+            color: var(--whiteColor);
+            transition: all 1s ease;
+
+            &:hover{
+                border: 1px solid var(--whiteColor);
+            }
+        }
+        & .registerBtn{
+            border: 2px solid var(--mainColor);
+            color: var(--mainColor);
+            transition: all 1s ease;
+
+            &:hover{
+                background-color: var(--mainColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+& .signUp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 5rem;
+    background-color: var(--blackColor);
+    padding: 0 0.5rem;
+    z-index: 100;
+
+    & .linkPage{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+
+        & img{
+            height: 70%;
+            aspect-ratio: 4/4;
+        }
+    }
+
+    & .authCta{
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+
+        & .registerBtn{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4rem;
+            font-size: small;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            padding: 1rem 1.5rem;
+        }
+        & .login{
+            display: none;
+        }
+        & .registerBtn{
+            border: 2px solid var(--mainColor);
+            color: var(--mainColor);
+            transition: all 1s ease;
+
+            &:hover{
+                background-color: var(--mainColor);
+                color: var(--whiteColor);
+            }
+        }
+    }
+}
+
+& .signIn{
+     position: fixed;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 100%;
+     height: 5rem;
+     background-color: var(--blackColor);
+     padding: 0 0.5rem;
+     z-index: 100;
+
+     & .linkPage{
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+
+         & img{
+             height: 70%;
+             aspect-ratio: 4/4;
+         }
+     }
+
+     & .authCta{
+         display: flex;
+         align-items: center;
+         gap: .5rem;
+
+         & .login{
+             display: flex;
+             align-items: center;
+             justify-content: center;
+             border-radius: 4rem;
+             font-size: small;
+             font-weight: bold;
+             text-align: center;
+             text-decoration: none;
+             padding: 1rem 1.5rem;
+         }
+         & .login{
+             background-color: var(--mainColor);
+             color: var(--whiteColor);
+             transition: all 1s ease;
+
+             &:hover{
+                 border: 1px solid var(--whiteColor);
+             }
+         }
+         & .registerBtn{
+             display: none;
+         }
+     }
+ }
