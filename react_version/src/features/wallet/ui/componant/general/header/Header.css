@@ -15,7 +15,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 3rem;
+        width: 2.2rem;
         aspect-ratio: 4/4;
         transition: all 1s ease;
 
@@ -38,12 +38,12 @@
 
         & img{
             aspect-ratio: 4/4;
-            height: 50%;
+            height: 40%;
         }
 
         & .mark{
             color: var(--whiteColor);
-            font-size: xx-large;
+            font-size: large;
             font-weight: bold;
         }
     }
@@ -52,7 +52,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 3rem;
+        width: 2.3rem;
         aspect-ratio: 4/4;
         border-radius: 50%;
         transition: all 1s ease;

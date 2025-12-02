@@ -8,6 +8,8 @@ import Home from "./features/wallet/ui/page/home/Home.jsx";
 import Profile from "./features/wallet/ui/page/profile/Profile.jsx";
 import History from "./features/wallet/ui/page/history/History.jsx";
 import MAccountPage from "./features/moneyAccount/ui/page/mAccountPage/MAccountPage.jsx";
+import Success from "./features/wallet/ui/page/successPage/Success.jsx";
+import Deposit from "./features/wallet/ui/page/deposit/Deposit.jsx";
 
 function App() {
 
@@ -23,6 +25,8 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path={`/profile`} element={<Profile />} />
           <Route path={`/history`} element={<History />} />
+          <Route path={`/successTransaction`} element={<Success />} />
+          <Route path={'/deposit'} element={<Deposit />} />
 
 
           {/*Routes about money accounts*/}
