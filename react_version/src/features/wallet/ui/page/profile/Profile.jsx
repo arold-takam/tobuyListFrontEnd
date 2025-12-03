@@ -35,7 +35,7 @@ export default function Profile() {
             <main>
                 <HeroProfile user={user} />
                 <InfoLine user={user} />
-                {user.roleName !== "CLIENT" ? <AccountZone /> : <ManageZone />}
+                {user.roleName === "CLIENT" ? <AccountZone /> : <ManageZone />}
                 <LogoutBtn />
                 <BottomHeader />
             </main>

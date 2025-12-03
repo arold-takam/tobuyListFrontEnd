@@ -20,7 +20,12 @@ export default function AccountZone() {
     if (accounts.length === 0) {
         return (
             <section className={`accountZone`}>
-                <div className="top"><h2>Money Accounts</h2>....</div>
+                <div className="top">
+                    <h2>Money Accounts</h2>
+                    <Link to={"/formAddMoneyAccount"} className="addBtn">
+                        <figure><img src={addIcon} alt="add button"/></figure>
+                    </Link>
+                </div>
                 <div className="account"><p>No stored money account yet.</p></div>
             </section>
         )
