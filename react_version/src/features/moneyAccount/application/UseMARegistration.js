@@ -1,7 +1,7 @@
 import * as apiRegistration from '../infrastructure/MARegisterService.js';
 import {useState} from "react";
 import {useAuth} from "../../../contextGlobal/authContext/useAuth.js";
-import {buildMoneyAccount} from "../domain/maModel.js";
+import {buildMoneyAccount} from "../domain/maRegisterModel/maModel.js";
 
 export default function UseMARegistration(){
     const [loading, setLoading] = useState(false);
