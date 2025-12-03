@@ -1,9 +1,11 @@
 import './FormAddMA.css';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import UseMARegistration from "../../../application/UseMARegistration.js";
 import {useState} from "react";
 
 export default function FormAddMA() {
+    const navigate = useNavigate();
+
     const {loading, error, register} = UseMARegistration();
     const [formData, setFormData] = useState({name: "", phone: "", password: "", });
 
@@ -16,7 +18,13 @@ export default function FormAddMA() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        await register(formData);
+        try {
+            await register(formData);
+
+            navigate("/profile");
+        }catch (error) {
+            console.error("Error while saving money account: ", error);
+        }
     }
     const handleChange = (e) => {
         setFormData({...formData, [e.target.name]: e.target.value});
