@@ -32,5 +32,5 @@ export function register(maData){
                 clientId: maData.clientId
             });
         }, 300);
-    })
+    });
 }
