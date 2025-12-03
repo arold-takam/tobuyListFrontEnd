@@ -5,10 +5,9 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: fit-content;
     background-color: var(--whiteColor);
     border: 1px solid var(--mainColor);
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     overflow: hidden;
 
     & ul{

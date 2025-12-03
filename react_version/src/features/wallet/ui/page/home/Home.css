@@ -191,7 +191,7 @@
                         transition: all 1s ease;
                     }
 
-                    &:hover{
+                    /*&:hover{
                         background-color: var(--secondaryColor);
 
                         & button{
@@ -201,7 +201,7 @@
                             font-weight: bold;
                             text-transform: uppercase;
                         }
-                    }
+                    }*/
                 }
             }
         }

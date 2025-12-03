@@ -1,4 +1,5 @@
 import InputNumber from "../general/inputNumber/InputNumber.jsx";
+import ValidateButton from "../general/validateButton/ValidateButton.jsx";
 import {Link} from "react-router-dom";
 
 
@@ -28,7 +29,11 @@ export default function FormTransfer()
                 </select>
             </div>
             <InputNumber />
-            <button type="submit" className="validate">VALIDER</button>
+            <ValidateButton>
+                <Link to={`/successTransaction`} className="button">
+                    VALIDER
+                </Link>
+            </ValidateButton>
         </form>
     )
 }

@@ -2,13 +2,13 @@ import {useState} from "react";
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import Header from "../../componant/general/header/Header.jsx";
 import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
-import './transfer.css';
+import './credit.css';
 import BottomHeader from "../../componant/general/bottomHeader/BottomHeader.jsx";
 import Hero from "../../componant/general/hero/Hero.jsx";
-import FormTransfer from "../../componant/transferComp/FormTransfer.jsx";
-import qrcode from '../../../../../assets/images/qr_code_scanner.png';
-import transfer from "../../../../../assets/images/transfert.png";
-export default function Transfer(){
+import creditLogo from "../../../../../assets/images/pret.png";
+import FormCredit from "../../componant/creditComp/FormCredit.jsx";
+
+export default function Credit(){
 
     const {isAuthenticated} = useAuth();
     const [activeMenu, setActiveMenu] = useState("");
@@ -25,31 +25,17 @@ export default function Transfer(){
     }
 
     return(
-        <div className="transfer">
+        <div className="credit">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose}/>
             <Header handleMainMenu={handleMainMenu}/>
             <Hero>
-                <h1>FAIRE UN TRANSFERT</h1>
+                <h1>OBTENIR UN PRET</h1>
                 <figure>
-                    <img src={transfer || ""} alt="transfer logo"/>
+                    <img src={creditLogo || ""} alt="deposit"/>
                 </figure>
             </Hero>
-            <FormTransfer/>
+            <FormCredit/>
             <BottomHeader/>
-            <section className="scan">
-                <div className="text">
-                    <h4>Ou</h4>
-                    <p>
-                        Vous Pouvez faire plus vite avec notre <b>FASTSCAN !</b>
-                    </p>
-                </div>
-                <a href="#" className="scanItem">
-                    <figure>
-                        <img src={qrcode || ""} alt="qrCode"/>
-                    </figure>
-                    <h5>Transférer par Scan</h5>
-                </a>
-            </section>
         </div>
     )
 }

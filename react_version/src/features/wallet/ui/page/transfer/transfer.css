@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100dvh;
     scroll-behavior: smooth;
 
 
@@ -11,112 +10,18 @@
         transform: translateX(0);
     }
 
-    & .up{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 8rem;
-        width: 100%;
-        background: linear-gradient(180deg, #000000 6.18%, #536dfe 74.72%);
-        padding: 3rem;
-        margin-bottom: 4rem;
-
-        & h1{
-            align-self: flex-start;
-            color: var(--whiteColor);
-            font-size: xx-large;
-        }
-
-        & figure{
-            align-self: center;
-            justify-self: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24rem;
-            aspect-ratio: 4/3;
-            background-color: var(--mainColor);
-            border-radius: 2rem;
-
-            & img{
-                height: 80%;
-            }
-        }
-    }
-
     & .transfertForm{
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
-        width: 90%;
+        gap: 1.3rem;
+        width: 92%;
         background-color: var(--whiteColor);
-        border-radius: 2rem;
+        border-radius: 1.5rem;
         box-shadow: 0 0 8px 1px rgba(83,109,254,0.5);
-        padding: 4rem;
-        margin-bottom: 2rem;
+        padding: 2rem;
+        margin: 1rem 0 2rem;
 
-        & .put, .details, .typeTransfert{
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-
-            & label{
-                position: absolute;
-                top: -1rem;
-                left: 2rem;
-                width: max-content;
-                background-color: var(--whiteColor);
-                font-size: x-large;
-            }
-
-            & input, select{
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 100%;
-                background-color: var(--whiteColor);
-                border: 1px solid var(--mainColor);
-                border-radius: 2rem;
-                font-size: x-large;
-                outline: none;
-                padding: 2rem;
-            }
-
-            & textarea{
-                width: 100%;
-                height: 12rem;
-                border: 1px solid var(--mainColor);
-                border-radius: 2rem;
-                font-size: x-large;
-                outline: none;
-                padding: 2rem;
-            }
-        }
-
-        & .validate{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 5rem;
-            background-color: var(--mainColor);
-            border: none;
-            color: var(--whiteColor);
-            letter-spacing: 0.5rem;
-            font-size: x-large;
-            font-weight: bold;
-            transition: all 1s ease;
-
-            &:hover{
-                border: 1px solid var(--blackColor);
-                border-radius: 1rem;
-                cursor: pointer;
-            }
-        }
     }
 
     & .scan{
@@ -124,24 +29,24 @@
         align-items: flex-start;
         justify-content: space-between;
         width: 90%;
-        margin-bottom: 2rem;
+        margin-bottom: 6rem;
 
         & .text{
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             gap: 1rem;
-            width: 60%;
+            width: 55%;
 
             & h4{
-                font-size: 4rem;
+                font-size: 1.5rem;
                 font-weight: bold;
                 text-align: left;
             }
 
             & p{
-                font-size: xx-large;
-                line-height: 3rem;
+                font-size: small;
+                line-height: 1.5rem;
                 text-align: left;
 
                 & b{
@@ -159,7 +64,7 @@
             width: 40%;
             aspect-ratio: 4/3;
             background-color: var(--whiteColor);
-            border-radius: 2rem;
+            border-radius: 0.75rem;
             box-shadow: 0 0 4px 3px rgba(83,109,254,0.25);
             text-decoration: none;
 
@@ -167,20 +72,20 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                height: 70%;
+                height: 60%;
                 aspect-ratio: 4/4;
                 background-color: var(--mainColor);
-                border-radius: 2rem;
+                border-radius: 0.75rem;
 
                 & img{
-                    width: 80%;
+                    width: 70%;
                     aspect-ratio: 4/4;
                 }
             }
 
             & h5{
                 color: var(--mainColor);
-                font-size: xx-large;
+                font-size: small;
                 text-align: center;
             }
         }

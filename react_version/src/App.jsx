@@ -12,6 +12,8 @@ import FormAddMA from "./features/moneyAccount/ui/page/formAdd/FormAddMA.jsx";
 import Success from "./features/wallet/ui/page/successPage/Success.jsx";
 import Deposit from "./features/wallet/ui/page/deposit/Deposit.jsx";
 import Transfer from "./features/wallet/ui/page/transfer/Transfer.jsx";
+import Credit from "./features/wallet/ui/page/credit/Credit.jsx";
+import Refund from "./features/wallet/ui/page/refund/Refund.jsx";
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
           <Route path={`/successTransaction`} element={<Success />} />
           <Route path={'/deposit'} element={<Deposit />} />
           <Route path={'/transfer'} element={<Transfer />} />
+          <Route path="/credit" element={<Credit />} />
+          <Route path="/refund" element={<Refund />} />
 
           {/*Routes about money accounts*/}
           <Route path={'/moneyAccount'} element={<MAccountPage />} />
