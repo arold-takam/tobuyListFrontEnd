@@ -1,0 +1,100 @@
+
+& .addMa{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+    height: 100dvh;
+    background: url("../../../../../assets/images/maBack.png") no-repeat top left;
+    background-size: cover;
+    padding: 1rem;
+
+    & h1{
+        color: var(--whiteColor);
+        text-align: center;
+    }
+
+    & .addForm{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+        width: 100%;
+        background: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.35) 100%);
+        border-radius: 1rem;
+        padding: 1rem;
+
+        & div{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            gap: .5rem;
+            width: 100%;
+
+            & label{
+                color: var(--whiteColor);
+                font-size: larger;
+                font-weight: 570;
+            }
+
+            & input, & select{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100%;
+                height: 3rem;
+                background-color: rgba(255, 255, 255, 0.8);
+                border: none;
+                border-radius: 2rem;
+                font-size: large;
+                outline: none;
+                padding: 0 1rem;
+            }
+        }
+
+        & .cta{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+
+            & .back, & .create{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 45%;
+                height: 3rem;
+                border: none;
+                border-radius: 2rem;
+                cursor: pointer;
+                font-size: larger;
+                font-weight: bold;
+                text-decoration: none;
+                transition: all 1s ease;
+            }
+            & .create{
+                background-color: var(--mainColor);
+                color: var(--whiteColor);
+
+                &:hover{
+                    border: 1px solid var(--whiteColor);
+                }
+            }
+            & .back{
+                background-color: transparent;
+                color: var(--whiteColor);
+                border: 1px solid var(--whiteColor);
+
+                &:hover{
+                    background-color: var(--mainColor);
+                    border: none;
+                }
+            }
+        }
+    }
+}

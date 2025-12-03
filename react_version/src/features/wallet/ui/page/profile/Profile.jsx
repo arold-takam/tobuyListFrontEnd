@@ -13,7 +13,6 @@ import AccountZone from "../../componant/profileComp/AccountZone.jsx";
 import ManageZone from "../../componant/profileComp/ManageZone.jsx";
 
 export default function Profile() {
-
     const [activeMenu, setActiveMenu] = useState("");
     const {isAuthenticated, user} = useAuth();
 
@@ -36,7 +35,7 @@ export default function Profile() {
             <main>
                 <HeroProfile user={user} />
                 <InfoLine user={user} />
-                {user.roleName !== "CLIENT" ? <AccountZone /> : <ManageZone />}
+                {user.roleName === "CLIENT" ? <AccountZone /> : <ManageZone />}
                 <LogoutBtn />
                 <BottomHeader />
             </main>
