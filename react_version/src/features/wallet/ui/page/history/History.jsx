@@ -29,7 +29,6 @@ export default function History() {
         <div className="story">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
-
             <Hero>
                 <h1>
                     HISTORIQUE DES TRANSACTIONS

@@ -13,7 +13,7 @@ export default function FormCredit() {
             <OfferType />
             <InputNumber />
             <ValidateButton>
-                <Link to={`/successTransaction`} className="button">
+                <Link to={`/confirm`} className="button">
                     VALIDER
                 </Link>
             </ValidateButton>

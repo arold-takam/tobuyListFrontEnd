@@ -17,7 +17,7 @@ export default function FormRefund() {
             </div>
             <InputNumber />
             <ValidateButton>
-                <Link to={`/successTransaction`} className="button">
+                <Link to={`/confirmRefund`} className="button">
                     VALIDER
                 </Link>
             </ValidateButton>
