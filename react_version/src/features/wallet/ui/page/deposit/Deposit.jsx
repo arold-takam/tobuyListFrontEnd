@@ -5,7 +5,8 @@ import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
 import './deposit.css';
 import DepositForm from "../../componant/depositComp/DepositForm.jsx";
 import BottomHeader from "../../componant/general/bottomHeader/BottomHeader.jsx";
-import HeroDeposit from "../../componant/depositComp/HeroDeposit.jsx";
+import Hero from "../../componant/general/hero/Hero.jsx"
+import tirelire from "../../../../../assets/images/Tirelire.png";
 
 export default function Deposit(){
 
@@ -27,7 +28,12 @@ export default function Deposit(){
         <div className="deposit">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
-            <HeroDeposit/>
+            <Hero>
+                <h1>FAIRE UN DEPOT</h1>
+                <figure>
+                    <img src={tirelire || ""} alt="deposit logo"/>
+                </figure>
+            </Hero>
             <DepositForm />
             <BottomHeader />
         </div>

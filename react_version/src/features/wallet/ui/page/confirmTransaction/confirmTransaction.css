@@ -1,0 +1,29 @@
+& .confirmRefund{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100dvh;
+    scroll-behavior: smooth;
+
+
+    & .active{
+        transform: translateX(0);
+    }
+
+    & .passForm{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        width: 90%;
+        background-color: var(--whiteColor);
+        border-radius: 1rem;
+        box-shadow: 0 0 8px 1px rgba(83,109,254,0.5);
+        padding: 2rem 1.5rem 3rem;
+        margin-top: 1rem;
+    }
+
+}
+

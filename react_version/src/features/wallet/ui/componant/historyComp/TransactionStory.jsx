@@ -82,7 +82,7 @@ export default function TransactionStory () {
                         </div>
                     </div>
                 </li>
-                <li className="mb">
+                <li>
                     <figure><img src={tirelire || ""} alt="deposit"/></figure>
                     <div className="right">
                         <div className="top">

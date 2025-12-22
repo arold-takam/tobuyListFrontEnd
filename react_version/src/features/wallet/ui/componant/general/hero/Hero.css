@@ -1,0 +1,33 @@
+& .up{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    width: 100%;
+    background: linear-gradient(180deg, #000000 6.18%, #536dfe 74.72%);
+    padding: 3rem 1rem;
+    margin-bottom: 1rem;
+
+    & h1{
+        align-self: flex-start;
+        color: var(--whiteColor);
+        font-size: small;
+        padding-top: 2.5rem;
+    }
+
+    & figure{
+        align-self: center;
+        justify-self: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 8rem;
+        aspect-ratio: 4/3;
+        background-color: var(--mainColor);
+        border-radius: 1.25rem;
+
+        & img{
+            height: 80%;
+        }
+    }
+}

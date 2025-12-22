@@ -14,17 +14,17 @@ export default function TransactList () {
                     <button type="button" className="depositBtn">DEPOT</button>
                 </Link>
                 <Link to={'/transfer'} className="opp">
-                    <figure><img src={transfert} alt="transfert"/></figure>
+                    <figure><img src={transfert || ""} alt="transfert"/></figure>
                     <button type="button" className="transfertBtn">TRANSFERT</button>
                 </Link>
-                <a href="./html/borrow.html" className="opp">
+                <Link to={'/credit'} className="opp">
                     <figure><img src={pret} alt="borrow"/></figure>
                     <button type="button" className="borrowBtn">PRÊT</button>
-                </a>
-                <a href="./html/refund.html" className="opp">
+                </Link>
+                <Link to={'/refund'} className="opp">
                     <figure><img src={Remboursement} alt="return"/></figure>
                     <button type="button" className="">REMBOURSEMENT</button>
-                </a>
+                </Link>
             </div>
         </section>
     );

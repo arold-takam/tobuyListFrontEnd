@@ -4,8 +4,9 @@ import './History.css'
 import BottomHeader from "../../componant/general/bottomHeader/BottomHeader.jsx";
 import Header from "../../componant/general/header/Header.jsx";
 import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
-import Hero from "../../componant/historyComp/Hero.jsx";
 import TransactionStory from "../../componant/historyComp/TransactionStory.jsx";
+import Hero from "../../componant/general/hero/Hero.jsx"
+import storyImg from "../../../../../assets/images/story.png";
 
 
 export default function History() {
@@ -28,8 +29,14 @@ export default function History() {
         <div className="story">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
-
-            <Hero />
+            <Hero>
+                <h1>
+                    HISTORIQUE DES TRANSACTIONS
+                </h1>
+                <figure>
+                    <img src={storyImg || "#"} alt="history picture"/>
+                </figure>
+            </Hero>
             <TransactionStory />
             <BottomHeader />
         </div>
