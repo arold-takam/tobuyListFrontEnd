@@ -14,7 +14,7 @@ import Deposit from "./features/wallet/ui/page/deposit/Deposit.jsx";
 import Transfer from "./features/wallet/ui/page/transfer/Transfer.jsx";
 import Credit from "./features/wallet/ui/page/credit/Credit.jsx";
 import Refund from "./features/wallet/ui/page/refund/Refund.jsx";
-import ConfirmTransaction from "./features/wallet/ui/page/confirmationRefund/ConfirmTransaction.jsx";
+import ConfirmTransaction from "./features/wallet/ui/page/confirmTransaction/ConfirmTransaction.jsx";
 
 function App() {
 

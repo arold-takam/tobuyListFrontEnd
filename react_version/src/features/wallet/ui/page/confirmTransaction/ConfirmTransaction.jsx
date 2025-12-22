@@ -1,4 +1,4 @@
-import './confirmRefund.css'
+import './confirmTransaction.css'
 import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
 import Header from "../../componant/general/header/Header.jsx";
 import {Link} from "react-router-dom";
