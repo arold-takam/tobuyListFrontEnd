@@ -3,6 +3,7 @@ import {useState} from "react";
 import updateIcon from "../../../../../assets/images/Crayon.png";
 import seeIcon from '../../../../../assets/images/eyeOpen.png';
 import hideIcon from '../../../../../assets/images/eyeClosed.png';
+import {Link} from "react-router-dom";
 
 
 export default function InfoLine({user}) {
@@ -16,10 +17,10 @@ export default function InfoLine({user}) {
         <section className="infoLine">
             <div className="top">
                 <h2>A Propos De Vous</h2>
-                <a href="#" className="updateBtn">
+                <Link to={"/update_profile"} state={{user}} className="updateBtn">
                     <p>MODIFIER</p>
                     <figure><img src={updateIcon} alt="pencil"/></figure>
-                </a>
+                </Link>
             </div>
             <div className="line">
                 <ul>

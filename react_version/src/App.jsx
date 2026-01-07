@@ -15,6 +15,7 @@ import Transfer from "./features/wallet/ui/page/transfer/Transfer.jsx";
 import Credit from "./features/wallet/ui/page/credit/Credit.jsx";
 import Refund from "./features/wallet/ui/page/refund/Refund.jsx";
 import ConfirmTransaction from "./features/wallet/ui/page/confirmTransaction/ConfirmTransaction.jsx";
+import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.jsx";
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
           {/*Routes about wallet */}
           <Route path="/home" element={<Home />} />
           <Route path={`/profile`} element={<Profile />} />
+          <Route path={'/update_profile'} element={<ProfileUpdate />} />
           <Route path={`/history`} element={<History />} />
           <Route path={`/successTransaction`} element={<Success />} />
           <Route path={'/deposit'} element={<Deposit />} />

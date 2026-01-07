@@ -1,0 +1,96 @@
+& .profileUpd{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+    height: 100dvh;
+    background: var(--secondaryColor);
+
+    & .update{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 3rem;
+        width: 100%;
+        background: transparent;
+        padding: 0 1rem;
+
+        & .put {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+            height: 3rem;
+            border: 2px solid var(--mainColor);
+            border-radius: 4rem;
+
+            & label {
+                position: absolute;
+                top: -1.6rem;
+                left: 1rem;
+                width: max-content;
+                background: transparent;
+                border-radius: 1rem;
+                color: var(--blackColor);
+                font-size: large;
+                padding: 0 0.5rem;
+            }
+
+            & input {
+                width: 100%;
+                height: 100%;
+                background-color: var(--smallWhite);
+                border: none;
+                border-radius: 4rem;
+                color: var(--mainColor);
+                font-size: larger;
+                font-weight: bold;
+                outline: none;
+                padding: 1rem 2rem;
+            }
+        }
+
+        & .cta{
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+            & button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 3rem;
+                border: none;
+                border-radius: .5rem;
+                cursor: pointer;
+                transition: all 1s ease;
+            }
+            & .back{
+                background: transparent;
+                border: 1px solid var(--blackColor);
+                color: var(--blackColor);
+                font-size: large;
+
+                &:hover{
+                    background: var(--mainColor);
+                    border: 2px solid var(--whiteColor);
+                    color: var(--whiteColor);
+                    font-weight: bold;
+                }
+            }
+            & .validate{
+                background: var(--mainColor);
+                color: white;
+                font-size: large;
+                font-weight: bold;
+                letter-spacing: 0;
+            }
+        }
+    }
+}
