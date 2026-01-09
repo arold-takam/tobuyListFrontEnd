@@ -4,7 +4,6 @@ import OM from '../../../../../../assets/images/orangeOM.webp';
 import MOMO from '../../../../../../assets/images/mtnMomo.webp';
 import paypal from '../../../../../../assets/images/paypal.webp';
 import './InputNumber.css'
-import {useState} from "react";
 
 const paymentMethods = [
     { name: "Compte Bancaire", img: account },
@@ -13,20 +12,24 @@ const paymentMethods = [
     { name: "PayPal", img: paypal },
 ];
 
-export default function InputNumber() {
+export default function InputNumber({selectedMethodIndex = 0,
+                                        onMethodChange,
+                                        accountNumber = "",
+                                        onAccountNumberChange}) {
 
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const selected = paymentMethods[selectedIndex];
+
+    const selected = paymentMethods[selectedMethodIndex];
 
     function handleNext(){
-        setSelectedIndex((prev) => (prev + 1) % paymentMethods.length);
+        const nextIndex = (selectedMethodIndex + 1) % paymentMethods.length;
+        onMethodChange(nextIndex);
     }
     return (
             <div className="pay">
                 <div className="select">
                     <div className="option">
                         <img
-                            src={selected.img}
+                            src={selected.img || ""}
                             alt={`Payer avec ${selected.name}`}
                             className="account"/>
                         <img
@@ -36,8 +39,14 @@ export default function InputNumber() {
                             onClick={handleNext}/>
                     </div>
                 </div>
-                <label htmlFor="number">Entrer Le Numero De Compte Payeur</label>
-                <input type="text" name="number" id="number" required/>
+                <label htmlFor="number">Entrer Le Numero De Compte {selected.name === "Compte Bancaire" ? "Bancaire" : selected.name}</label>
+                <input
+                    type="text"
+                    name="number"
+                    id="number"
+                    value={accountNumber}
+                    onChange={(e) => onAccountNumberChange(e.target.value)}
+                    required/>
             </div>
     )
 }

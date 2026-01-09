@@ -37,19 +37,26 @@
             & .screen{
                 display: flex;
                 align-items: center;
-                justify-content: center;
+                justify-content: flex-start;
                 width: 100%;
-                overflow: hidden;
+                overflow-x: auto;
+                overflow-y: hidden;
+                -webkit-overflow-scrolling: touch;
+                scroll-behavior: smooth;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
 
                 & ul{
                     display: flex;
                     align-items: center;
-                    justify-content: flex-start;
+                    justify-content: center;
                     gap: 2rem;
                     width: max-content;
-                    overflow: scroll hidden;
                     padding: 1rem;
-                    scroll-behavior: smooth;
 
                     & li{
                         flex-shrink: 0;
@@ -131,7 +138,7 @@
                 background-color: var(--mainColor);
                 border-radius: 2rem;
                 overflow: hidden;
-                padding: 0rem 1.5rem;
+                padding: 0 1.5rem;
 
                 & button{
                     display: flex;
