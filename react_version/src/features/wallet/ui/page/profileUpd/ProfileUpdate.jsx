@@ -8,11 +8,25 @@ export default function ProfileUpdate() {
     const {user} = location.state || {};
 
     const [formData, setFormData] = useState({
-        name: user?.name || " ",
+        name: user?.name || "",
         username: user?.username || "",
         mail: user?.mail || "",
-        password: user?.password
+        password: user?.password || ""
     });
+
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        console.log(formData);
+
+        setFormData({
+                name:"",
+                username:"",
+                mail:"",
+                password:""
+        });
+    }
 
     const handleChange = (e) => {
         setFormData({
@@ -24,7 +38,7 @@ export default function ProfileUpdate() {
     return (
         <section className="profileUpd">
             <h1>Update your profile</h1>
-            <form className="update">
+            <form className="update" onSubmit={handleSubmit}>
                 <div className="put">
                     <label htmlFor="name">Enter your name</label>
                     <input type="text" name="name" value={formData.name} id="name" className="name" required onChange={handleChange}/>
