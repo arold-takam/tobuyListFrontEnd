@@ -93,32 +93,7 @@
                         border-radius: 2rem;
                         padding: 0.5rem 0;
                     }
-                    & .consult{
-                        background-color: var(--mainColor);
-                        border: none;
-                        color: var(--whiteColor);
-                        transition: all 0.5s ease;
 
-                        &:hover{
-                            border: 1px solid var(--whiteColor);
-                            cursor: pointer;
-                            font-weight: bold;
-                        }
-                    }
-                    & .saving{
-                        background-color: transparent;
-                        border: 1px solid var(--mainColor);
-                        color: var(--mainColor);
-                        font-weight: bold;
-                        transition: all 1s ease;
-
-                        &:hover{
-                            background-color: var(--mainColor);
-                            border: none;
-                            color: var(--whiteColor);
-                            cursor: pointer;
-                        }
-                    }
                 }
             }
         }
@@ -265,9 +240,16 @@
                     gap: 1rem;
                     width: 100%;
                     height: 16rem;
-                    overflow: scroll hidden;
-                    padding: .5rem 0;
+                    overflow-x: auto;
+                    overflow-y: hidden;
+                    scroll-snap-type: x mandatory;
                     scroll-behavior: smooth;
+                    padding: 0 .5rem;
+                    -ms-overflow-style: none;
+                    scrollbar-width: none;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
 
                     & li{
                         display: flex;
@@ -275,6 +257,7 @@
                         align-items: flex-end;
                         justify-content: space-between;
                         width: 100%;
+                        scroll-snap-align: center;
                         height: 100%;
                         flex-shrink: 0;
                         background: url("../../../../../assets/images/les_rapides.webp") no-repeat center;

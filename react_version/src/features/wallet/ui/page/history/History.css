@@ -19,6 +19,7 @@
         overflow: hidden scroll;
         padding: 1rem;
         scroll-behavior: smooth;
+        margin-bottom: 3.5rem;
 
         & ul{
             display: flex;

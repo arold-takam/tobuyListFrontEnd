@@ -11,7 +11,7 @@
     & h1{
         align-self: flex-start;
         color: var(--whiteColor);
-        font-size: small;
+        font-size: large;
         padding-top: 2.5rem;
     }
 
