@@ -227,24 +227,6 @@
                                 aspect-ratio: 16/9;
                                 object-fit: cover;
                             }
-
-                            & figure{
-                                position: absolute;
-                                right: 0;
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                width: 2rem;
-                                aspect-ratio: 4/4;
-                                background-color: var(--mainColor);
-                                border-radius: .5rem;
-
-                                & img{
-                                    width: 80%;
-                                    aspect-ratio: 4/4;
-                                    object-fit: cover;
-                                }
-                            }
                         }
                     }
                 }

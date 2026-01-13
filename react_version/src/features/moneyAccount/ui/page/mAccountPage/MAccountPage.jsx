@@ -1,4 +1,4 @@
-import {useLocation} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 import {useEffect, useState} from "react";
 import './MAccountPage.css';
 
@@ -11,22 +11,24 @@ import updateIcon from '../../../../../assets/images/Crayon.png';
 import deleteIcon from '../../../../../assets/images/delete.png';
 import eyeOpen from '../../../../../assets/images/eyeOpen.png';
 import eyeClose from '../../../../../assets/images/eyeClosed.png';
+import UseMADelete from "../../../application/UseMADelete.js";
 
 
 export default function MAccountPage() {
-    const {isAuthenticated} = useAuth();
+    const {isAuthenticated, error ,user} = useAuth();
+    const {loading, deleteMAccount} = UseMADelete();
+    const [activeMenu, setActiveMenu] = useState("");
+    const [passVisible, setPassVisible] = useState(false);
+    const [priceVisible, setPriceVisible] = useState(false);
+    const [cardColor, setCardColor] = useState(' ');
+
+
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [activeMenu, setActiveMenu] = useState("");
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [passVisible, setPassVisible] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [priceVisible, setPriceVisible] = useState(false);
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [cardColor, setCardColor] = useState(' ');
+    const navigate = useNavigate();
 
     const handleMainMenu = () => {
         setActiveMenu("active");
@@ -42,14 +44,43 @@ export default function MAccountPage() {
         setPriceVisible(!priceVisible);
     }
 
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const location = useLocation();
-    const {account} = location.state || {};
+    const delMAccount = async (e) => {
+        e.preventDefault();
+
+        const password = prompt("Entrer votre mot de pass: ");
+
+        // console.log("yo for account: ", id, password);
+
+        if (password !== user.password) {
+            return alert("Votre mot de password est incorrect.");
+        }
+
+        const delData = {
+            clientID: user.id,
+            mAccountID: account.id,
+            password: user.password
+        };
+
+        try {
+            await deleteMAccount(delData);
+
+            alert("Compte supprimé avec succès.");
+
+            navigate("/profile");
+        }catch(err){
+            console.error(err.message);
+            alert("Erreur lors de la suppression : " + error);
+        }
+    }
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
-    useEffect(() => {
-        console.log(account);
-    }, [account]);
+    const location = useLocation();
+
+    const account = location.state?.account || {};
+
+    // useEffect(() => {
+    //     console.log(account);
+    // }, [account]);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -88,10 +119,10 @@ export default function MAccountPage() {
                     <section className="infoLine">
                         <div className="top">
                             <h2>A Propos De Ce Compte</h2>
-                            <a href="#" className="updateBtn">
+                            <Link to={'/updateMoneyAccount'} state={{account: account}} className="updateBtn">
                                 <p>MODIFIER</p>
                                 <figure><img src={updateIcon} alt="pencil"/></figure>
-                            </a>
+                            </Link>
                         </div>
                         <div className="line">
                             <ul>
@@ -114,10 +145,16 @@ export default function MAccountPage() {
                         </div>
                     </section>
                     <section className="deleteAccount">
-                        <a href="#">
-                            <p>SUPPRIMER CE COMPTE</p>
-                            <img src={deleteIcon} alt="waste icon"/>
-                        </a>
+                        {loading?
+                            <a onClick={delMAccount} disabled>
+                                <p>EN COURS DE SURPRESSION...</p>
+                                <img src={deleteIcon} alt="waste icon"/>
+                            </a>
+                            : <a onClick={delMAccount}>
+                                <p>SUPPRIMER CE COMPTE</p>
+                                <img src={deleteIcon} alt="waste icon"/>
+                            </a>
+                        }
                     </section>
                     <BottomHeader />
                 </main>

@@ -1,9 +1,12 @@
 import './ProfileUpdate.css';
 
-import {useLocation} from "react-router-dom";
-import {useState} from "react";
+import {useLocation, useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
+import UseProfileUpdate from "../../../application/UseProfileUpdate.jsx";
 
 export default function ProfileUpdate() {
+    const {loading, error, successMsg, update} = UseProfileUpdate();
+
     const location = useLocation();
     const {user} = location.state || {};
 
@@ -14,18 +17,28 @@ export default function ProfileUpdate() {
         password: user?.password || ""
     });
 
+    const navigate = useNavigate();
+    useEffect(()=>{
+        if (successMsg) {
+            navigate("/profile", {
+                state: successMsg
+            });
+        }
+    }, [successMsg, navigate]);
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         console.log(formData);
 
         setFormData({
-                name:"",
-                username:"",
-                mail:"",
-                password:""
+            name: "",
+            username: "",
+            mail: "",
+            password: ""
         });
+
+        await update(formData);
     }
 
     const handleChange = (e) => {
@@ -35,10 +48,15 @@ export default function ProfileUpdate() {
         });
     }
 
+    const backToProfil = () => {
+        navigate("/profile");
+    }
+
     return (
         <section className="profileUpd">
             <h1>Update your profile</h1>
             <form className="update" onSubmit={handleSubmit}>
+                {error && <p style={{color: 'red', fontWeight: 'bold'}}>{error}</p> }
                 <div className="put">
                     <label htmlFor="name">Enter your name</label>
                     <input type="text" name="name" value={formData.name} id="name" className="name" required onChange={handleChange}/>
@@ -56,8 +74,10 @@ export default function ProfileUpdate() {
                     <input type={"password"} name="password" value={formData.password} id="password" className="password" onChange={handleChange}/>
                 </div>
                 <div className="cta">
-                    <button type="button" className="back">RETOUR</button>
-                    <button type="submit" className="validate">ENVOYER</button>
+                    <button type="button" className="back" onClick={backToProfil}>RETOUR</button>
+                    <button type="submit" className="validate">
+                        {loading ? "ENVOI...": "ENVOYER"}
+                    </button>
                 </div>
             </form>
         </section>

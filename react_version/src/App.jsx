@@ -16,6 +16,7 @@ import Credit from "./features/wallet/ui/page/credit/Credit.jsx";
 import Refund from "./features/wallet/ui/page/refund/Refund.jsx";
 import ConfirmTransaction from "./features/wallet/ui/page/confirmTransaction/ConfirmTransaction.jsx";
 import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.jsx";
+import FormUpdMA from "./features/moneyAccount/ui/page/formUpd/FormUpdMA.jsx";
 
 function App() {
 
@@ -42,6 +43,7 @@ function App() {
           {/*Routes about money accounts*/}
           <Route path={'/moneyAccount'} element={<MAccountPage />} />
           <Route path={'/formAddMoneyAccount'} element={<FormAddMA />} />
+          <Route path={'/updateMoneyAccount'} element={<FormUpdMA />} />
       </Routes>
   )
 }
