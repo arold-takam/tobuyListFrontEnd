@@ -14,11 +14,17 @@ function saveMoneyAccount(moneyAccounts) {
 
 //---------------------------------------------------------------
 export function register(maData){
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         setTimeout(() => {
             const maArray = loadMoneyAccount();
 
-            maData.id = maArray.length + 1;
+            if (maData.password.length < 4){
+                return reject(new Error("Password must be at least 4 characters long"));
+            }
+
+            const maxID = maArray.reduce((max, account) => Math.max(max, account.id), 0);
+
+            maData.id = maxID + 1;
             maData.amount = 0.0;
             maArray.push(maData);
 

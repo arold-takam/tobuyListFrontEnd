@@ -4,8 +4,6 @@ import AccountItem from "./AccountItem.jsx";
 import UseMaLoading from "../../../../moneyAccount/application/UseMaLoading.js";
 import {Link} from "react-router-dom";
 
-
-
 export default function AccountZone() {
     const {loading, error, accounts} = UseMaLoading();
 
