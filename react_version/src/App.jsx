@@ -18,6 +18,7 @@ import ConfirmTransaction from "./features/wallet/ui/page/confirmTransaction/Con
 import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.jsx";
 import FormUpdMA from "./features/moneyAccount/ui/page/formUpd/FormUpdMA.jsx";
 import MaDeposit from "./features/moneyAccount/ui/page/formDeposit/MaDeposit.jsx";
+import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.jsx";
 
 function App() {
 
@@ -46,6 +47,7 @@ function App() {
             <Route path={'/formAddMoneyAccount'} element={<FormAddMA/>}/>
             <Route path={'/updateMoneyAccount'} element={<FormUpdMA/>}/>
             <Route path={'/account_deposit'} element={<MaDeposit/>}/>
+                <Route path={'/account_withdraw'} element={<MaWithdraw />} />
         </Routes>
     )
 }

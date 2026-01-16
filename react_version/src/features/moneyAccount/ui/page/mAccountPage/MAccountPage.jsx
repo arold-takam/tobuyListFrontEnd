@@ -13,7 +13,6 @@ import eyeOpen from '../../../../../assets/images/eyeOpen.png';
 import eyeClose from '../../../../../assets/images/eyeClosed.png';
 import UseMADelete from "../../../application/UseMADelete.js";
 
-
 export default function MAccountPage() {
     const {isAuthenticated, error ,user} = useAuth();
     const {loading, deleteMAccount} = UseMADelete();
@@ -126,7 +125,7 @@ export default function MAccountPage() {
                         </div>
                         <div className="bottom">
                             <Link to={"/account_deposit"} state={{account: account}} className="depositAccount">Depot</Link>
-                            <button className="withdrawAccount">Retrait</button>
+                            <Link to={'/account_withdraw'} state={{account: account}} className="withdrawAccount">Retrait</Link>
                         </div>
                     </div>
                     <section className="infoLine">

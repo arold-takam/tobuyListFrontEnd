@@ -19,7 +19,6 @@ export function deposit(depData) {
 
             // 1. On cherche par accountId (clé envoyée par le formulaire)
             const mAccount = maArray.find(acc => Number(acc.id) === Number(depData.accountId));
-
             if (!mAccount) {
                 return reject(new Error('Compte introuvable pour ID: ' + depData.accountId));
             }
@@ -33,7 +32,6 @@ export function deposit(depData) {
                     ? { ...acc, amount: newAmount }
                     : acc
             );
-
             saveMoneyAccounts(updatedArray);
 
             // 4. On renvoie l'objet mis à jour
