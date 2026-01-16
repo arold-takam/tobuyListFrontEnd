@@ -1,4 +1,4 @@
-& .maDeposit{
+& .maWithdraw{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,7 @@
         text-align: center;
     }
 
-    & .dep{
+    & .withdrawForm{
         display: flex;
         flex-direction: column;
         align-items: center;

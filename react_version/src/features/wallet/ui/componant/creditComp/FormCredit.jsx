@@ -1,5 +1,5 @@
 import ValidateButton from "../general/validateButton/ValidateButton.jsx";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import OfferType from "./OfferType.jsx";
 import InputNumber from "../general/inputNumber/InputNumber.jsx";
 import {useState} from "react";

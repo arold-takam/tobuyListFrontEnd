@@ -1,5 +1,5 @@
 import Triangle from "../../../../../assets/images/Triangle.png";
-import {useEffect, useRef, useState} from "react";
+import {useCallback, useEffect, useRef, useState} from "react";
 
 export default function InfoList() {
 
@@ -28,17 +28,42 @@ export default function InfoList() {
 
     const totalPages = news.length;
 
-    const goToNext = () => {
-        if (screenRef.current && currentPage < totalPages) {
-            screenRef.current.scrollBy({ left: screenRef.current.offsetWidth, behavior: "smooth" });
+    const goToNext = useCallback(() => {
+        if (screenRef.current) {
+            if (currentPage < totalPages) {
+                screenRef.current.scrollBy({ left: screenRef.current.offsetWidth, behavior: "smooth" });
+            } else {
+                // Loop back to the start if at the end
+                screenRef.current.scrollTo({ left: 0, behavior: "smooth" });
+            }
         }
-    };
+    }, [currentPage, totalPages]);
 
-    const goToPrev = () => {
+    const goToPrev = useCallback(() => {
         if (screenRef.current && currentPage > 1) {
             screenRef.current.scrollBy({ left: -screenRef.current.offsetWidth, behavior: "smooth" });
         }
-    };
+    }, [currentPage]);
+    
+    // const goToNext = () => {
+    //     if (screenRef.current && currentPage < totalPages) {
+    //         screenRef.current.scrollBy({ left: screenRef.current.offsetWidth, behavior: "smooth" });
+    //     }
+    // };
+    //
+    // const goToPrev = () => {
+    //     if (screenRef.current && currentPage > 1) {
+    //         screenRef.current.scrollBy({ left: -screenRef.current.offsetWidth, behavior: "smooth" });
+    //     }
+    // };
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            goToNext();
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [goToNext]);
 
     useEffect(() => {
         const screen = screenRef.current;

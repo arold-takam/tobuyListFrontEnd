@@ -13,7 +13,6 @@ import eyeOpen from '../../../../../assets/images/eyeOpen.png';
 import eyeClose from '../../../../../assets/images/eyeClosed.png';
 import UseMADelete from "../../../application/UseMADelete.js";
 
-
 export default function MAccountPage() {
     const {isAuthenticated, error ,user} = useAuth();
     const {loading, deleteMAccount} = UseMADelete();
@@ -21,7 +20,8 @@ export default function MAccountPage() {
     const [passVisible, setPassVisible] = useState(false);
     const [priceVisible, setPriceVisible] = useState(false);
     const [cardColor, setCardColor] = useState(' ');
-
+    
+    const [account, setAccount] = useState({});
 
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
@@ -75,12 +75,24 @@ export default function MAccountPage() {
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const location = useLocation();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    const accountId = location.state?.account?.id || {};
 
-    const account = location.state?.account || {};
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    useEffect(() => {
+        const stored = localStorage.getItem("moneyAccounts");
+        const maList = stored ? JSON.parse(stored) : [];
+        
+        const accountFound = maList.find(acc => acc.id === accountId);
+        if (!accountFound) {
+            console.warn("Compte introuvable, redirection...");
+            navigate("/profile");
+        }
 
-    // useEffect(() => {
-    //     console.log(account);
-    // }, [account]);
+        setAccount(accountFound);
+
+        // console.log("Compte chargé :", accountFound);
+    }, [accountId, navigate]);
 
     // eslint-disable-next-line react-hooks/rules-of-hooks
     useEffect(() => {
@@ -112,8 +124,8 @@ export default function MAccountPage() {
                             <span>FCFA</span>
                         </div>
                         <div className="bottom">
-                            <button type="button" className="depositAccount">Depot</button>
-                            <button type="button" className="withdrawAccount">Retrait</button>
+                            <Link to={"/account_deposit"} state={{account: account}} className="depositAccount">Depot</Link>
+                            <Link to={'/account_withdraw'} state={{account: account}} className="withdrawAccount">Retrait</Link>
                         </div>
                     </div>
                     <section className="infoLine">

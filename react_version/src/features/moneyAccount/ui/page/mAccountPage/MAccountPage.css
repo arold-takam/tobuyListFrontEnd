@@ -83,13 +83,14 @@
                 justify-content: space-between;
                 width: 100%;
 
-                & button{
+                & .depositAccount, & .withdrawAccount{
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     min-width: 45%;
                     border-radius: 2rem;
                     padding: .5rem;
+                    text-decoration: none;
                 }
                 & .depositAccount{
                     background-color: var(--blackColor);

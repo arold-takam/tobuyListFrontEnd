@@ -33,14 +33,14 @@ export default function MainMenu({activeMenu, handleMenuClose}) {
                 </Link>
                 <figure className="menu" onClick={handleMenuClose}><img src={menuClose} alt="menu"/></figure>
             </div>
-            <div className="profile">
-                <figure className="userProfile"><img src={userProfile} alt="user"/></figure>
+            <Link to={`/profile`} className="profile">
+                <figure className="userProfile"><img src={userProfile || ""} alt="user"/></figure>
                 <div className="userInfo">
                     <h1>Toto Le Cloone</h1>
                     <p><b>+15</b> transactions ce moi</p>
                 </div>
-                <img src={ratioUp} alt="rate" className="rate"/>
-            </div>
+                <img src={ratioUp || ""} alt="rate" className="rate"/>
+            </Link>
             <nav>
                 <a href="#" className="notify">
                     <figure className="notif"><img src={notifications} alt="notify"/></figure>
@@ -69,7 +69,7 @@ export default function MainMenu({activeMenu, handleMenuClose}) {
                 <p>SURPRISE !</p>
             </div>
             <footer>
-                <div className="up">
+                <div className="footer-up">
                     <Link to={`/home`} className="logo">
                         <img src={imgLogo} alt="logo"/>
                         <div className="mark">ToBuyList</div>

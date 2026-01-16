@@ -1,10 +1,14 @@
 import InputNumber from "../general/inputNumber/InputNumber.jsx";
 import ValidateButton from "../general/validateButton/ValidateButton.jsx";
 import {Link} from "react-router-dom";
+import {useState} from "react";
 
 
 export default function FormTransfer()
 {
+    const [selectedMethodIndex, setSelectedMethodIndex] = useState(0);
+    const [accountNumber, setAccountNumber] = useState("");
+
     function handleSubmit(){
         //to implement later
     }
@@ -21,14 +25,18 @@ export default function FormTransfer()
             </div>
             <div className="typeTransfert">
                 <label htmlFor="type">Quel Type De Transfert Souhaitez-Vous Faire?</label>
-                <select name="type" id="type">
-                    <option value="" disabled selected>Choisir ici(Click)</option>
+                <select name="type" id="type" defaultValue="">
+                    <option value="" disabled>Choisir ici(Click)</option>
                     <option value="WITHDRAWAL">RETRAIT</option>
                     <option value="TRANSFER">TRANSFERT</option>
                     <option value="SHOPPING">SHOPPING</option>
                 </select>
             </div>
-            <InputNumber />
+            <InputNumber
+                selectedMethodIndex={selectedMethodIndex}
+                onMethodChange={setSelectedMethodIndex}
+                accountNumber={accountNumber}
+                onAccountNumberChange={setAccountNumber}/>
             <ValidateButton>
                 <Link to={`/successTransaction`} className="button">
                     VALIDER
