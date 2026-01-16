@@ -44,6 +44,7 @@
                 border: 1px solid var(--mainColor);
                 border-radius: 0.75rem;
                 font-size: small;
+                color: inherit;
                 outline: none;
                 padding: 1.2rem;
             }
