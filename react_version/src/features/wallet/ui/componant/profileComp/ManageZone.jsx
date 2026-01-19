@@ -3,6 +3,7 @@ import manageAccount from '../../../../../assets/images/manage_accounts.png';
 import borrowIcon from '../../../../../assets/images/pret.png';
 import returnIcon from '../../../../../assets/images/Remboursement.png';
 import cdOfferIcon from '../../../../../assets/images/creditOfferIcon.png';
+import {Link} from "react-router-dom";
 
 export default function ManageZone(){
     return (
@@ -16,10 +17,20 @@ export default function ManageZone(){
             <div className="optionsManage">
                 <ul>
                     <li>
-                        <a href="#">
+                        <Link to={'/profileManage'} href="#">
                             <figure><img src={manageAccount} alt="account icon"/></figure>
                             <p>
                                 <b>Gestion Des Comptes</b>
+                                <span> &gt; </span>
+                            </p>
+                        </Link>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure><img src={cdOfferIcon} alt="credit offer icon"/>
+                            </figure>
+                            <p>
+                                <b>Gestion Des Offres De Credit</b>
                                 <span> &gt; </span>
                             </p>
                         </a>
@@ -38,16 +49,6 @@ export default function ManageZone(){
                             <figure><img src={returnIcon} alt="return icon"/></figure>
                             <p>
                                 <b>Gestion Des Remboursements</b>
-                                <span> &gt; </span>
-                            </p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="../html/creditOfferManagement.html">
-                            <figure><img src={cdOfferIcon} alt="credit offer icon"/>
-                            </figure>
-                            <p>
-                                <b>Gestion Des Offres De Credit</b>
                                 <span> &gt; </span>
                             </p>
                         </a>
