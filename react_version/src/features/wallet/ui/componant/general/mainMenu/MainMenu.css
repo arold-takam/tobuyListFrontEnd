@@ -279,7 +279,7 @@
         border-top-right-radius: 1rem;
         border-top-left-radius: 1rem;
 
-        & .up{
+        & .footer-up{
             display: flex;
             align-items: center;
             justify-content: space-between;

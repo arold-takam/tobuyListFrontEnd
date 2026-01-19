@@ -1,10 +1,14 @@
 import InputNumber from "../general/inputNumber/InputNumber.jsx";
 import {Link} from "react-router-dom";
 import ValidateButton from "../general/validateButton/ValidateButton.jsx";
+import {useState} from "react";
 
 
 export default function DepositForm()
 {
+
+    const [selectedMethodIndex, setSelectedMethodIndex] = useState(0);
+    const [accountNumber, setAccountNumber] = useState("");
     function handleSubmit(){
         //to implement later
     }
@@ -19,7 +23,11 @@ export default function DepositForm()
                 <label htmlFor="details">Associer Une Description a Votre Dépot</label>
                 <textarea name="details" id="details"></textarea>
             </div>
-            <InputNumber />
+           <InputNumber
+               selectedMethodIndex={selectedMethodIndex}
+               onMethodChange={setSelectedMethodIndex}
+               accountNumber={accountNumber}
+               onAccountNumberChange={setAccountNumber}/>
             <ValidateButton>
                 <Link to={`/successTransaction`} className="button">
                     VALIDER

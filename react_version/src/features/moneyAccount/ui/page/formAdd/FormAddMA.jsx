@@ -2,11 +2,14 @@ import './FormAddMA.css';
 import {Link, useNavigate} from "react-router-dom";
 import UseMARegistration from "../../../application/UseMARegistration.js";
 import {useState} from "react";
+import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 
 export default function FormAddMA() {
     const navigate = useNavigate();
 
-    const {loading, error, register} = UseMARegistration();
+    const {user} = useAuth();
+
+    const {loading, setLoading, error, register} = UseMARegistration();
     const [formData, setFormData] = useState({name: "", phone: "", password: "", });
 
     const AccountName = [
@@ -19,7 +22,10 @@ export default function FormAddMA() {
         e.preventDefault();
 
         try {
-            await register(formData);
+            const dataToSave = {...formData, clientId: user.id};
+            await register(dataToSave);
+
+            setLoading(true);
 
             navigate("/profile");
         }catch (error) {
@@ -27,6 +33,7 @@ export default function FormAddMA() {
         }
     }
     const handleChange = (e) => {
+        setLoading(false);
         setFormData({...formData, [e.target.name]: e.target.value});
     }
 
@@ -54,9 +61,10 @@ export default function FormAddMA() {
                 </div>
                 <div className="cta">
                     <Link to={"/profile"} type={'button'} className="back">BACK</Link>
-                    <button type={'submit'} className="create" disabled={loading}>
-                        {loading? "CREATING..." : "CREATE"}
-                    </button>
+                        {loading?
+                            <button type={'submit'} className="create" disabled={true}>CREATING...</button>
+                            :<button type={'submit'} className="create">CREATE</button>
+                        }
                 </div>
             </form>
         </div>

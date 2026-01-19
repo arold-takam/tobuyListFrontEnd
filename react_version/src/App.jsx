@@ -16,34 +16,40 @@ import Credit from "./features/wallet/ui/page/credit/Credit.jsx";
 import Refund from "./features/wallet/ui/page/refund/Refund.jsx";
 import ConfirmTransaction from "./features/wallet/ui/page/confirmTransaction/ConfirmTransaction.jsx";
 import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.jsx";
+import FormUpdMA from "./features/moneyAccount/ui/page/formUpd/FormUpdMA.jsx";
+import MaDeposit from "./features/moneyAccount/ui/page/formDeposit/MaDeposit.jsx";
+import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.jsx";
 
 function App() {
 
-  return (
-      <Routes>
-          {/*Routes about landing page*/}
-          <Route path="/" element={<HomeLanding />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/success" element={<SuccessPage />} />
+    return (
+        <Routes>
+            {/*Routes about landing page*/}
+            <Route path="/" element={<HomeLanding/>}/>
+            <Route path="/register" element={<Register/>}/>
+            <Route path="/login" element={<Login/>}/>
+            <Route path="/success" element={<SuccessPage/>}/>
 
-          {/*Routes about wallet */}
-          <Route path="/home" element={<Home />} />
-          <Route path={`/profile`} element={<Profile />} />
-          <Route path={'/update_profile'} element={<ProfileUpdate />} />
-          <Route path={`/history`} element={<History />} />
-          <Route path={`/successTransaction`} element={<Success />} />
-          <Route path={'/deposit'} element={<Deposit />} />
-          <Route path={'/transfer'} element={<Transfer />} />
-          <Route path="/credit" element={<Credit />} />
-          <Route path="/refund" element={<Refund />} />
-          <Route path="/confirm" element={<ConfirmTransaction />} />
+            {/*Routes about wallet */}
+            <Route path="/home" element={<Home/>}/>
+            <Route path={`/profile`} element={<Profile/>}/>
+            <Route path={'/update_profile'} element={<ProfileUpdate/>}/>
+            <Route path={`/history`} element={<History/>}/>
+            <Route path={`/successTransaction`} element={<Success/>}/>
+            <Route path={'/deposit'} element={<Deposit/>}/>
+            <Route path={'/transfer'} element={<Transfer/>}/>
+            <Route path="/credit" element={<Credit/>}/>
+            <Route path="/refund" element={<Refund/>}/>
+            <Route path="/confirm" element={<ConfirmTransaction/>}/>
 
-          {/*Routes about money accounts*/}
-          <Route path={'/moneyAccount'} element={<MAccountPage />} />
-          <Route path={'/formAddMoneyAccount'} element={<FormAddMA />} />
-      </Routes>
-  )
+            {/*Routes about money accounts*/}
+            <Route path={'/moneyAccount'} element={<MAccountPage/>}/>
+            <Route path={'/formAddMoneyAccount'} element={<FormAddMA/>}/>
+            <Route path={'/updateMoneyAccount'} element={<FormUpdMA/>}/>
+            <Route path={'/account_deposit'} element={<MaDeposit/>}/>
+                <Route path={'/account_withdraw'} element={<MaWithdraw />} />
+        </Routes>
+    )
 }
 
 export default App

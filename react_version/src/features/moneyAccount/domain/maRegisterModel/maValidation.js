@@ -11,7 +11,7 @@ export default function maValidation(maData) {
     }
 
     if (maData.phone && maData.phone.length !== 9){
-        errors.push('Right phone number is required');
+        errors.push('Right phone number is required(9 caracteres at least).');
     }
 
     return errors;

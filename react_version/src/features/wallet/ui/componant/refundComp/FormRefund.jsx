@@ -1,8 +1,13 @@
 import InputNumber from "../general/inputNumber/InputNumber.jsx";
 import {Link} from "react-router-dom";
 import ValidateButton from "../general/validateButton/ValidateButton.jsx";
+import {useState} from "react";
 
 export default function FormRefund() {
+
+    const [selectedMethodIndex, setSelectedMethodIndex] = useState(0);
+    const [accountNumber, setAccountNumber] = useState("");
+
     return (
         <form className="refundForm">
             <div className="put">
@@ -15,7 +20,11 @@ export default function FormRefund() {
                 </label>
                 <textarea name="description" id="description"></textarea>
             </div>
-            <InputNumber />
+            <InputNumber
+                selectedMethodIndex={selectedMethodIndex}
+                onMethodChange={setSelectedMethodIndex}
+                accountNumber={accountNumber}
+                onAccountNumberChange={setAccountNumber}/>
             <ValidateButton>
                 <Link to={`/confirm`} className="button">
                     VALIDER
