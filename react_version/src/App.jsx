@@ -19,6 +19,8 @@ import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.js
 import FormUpdMA from "./features/moneyAccount/ui/page/formUpd/FormUpdMA.jsx";
 import MaDeposit from "./features/moneyAccount/ui/page/formDeposit/MaDeposit.jsx";
 import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.jsx";
+import ProfileManage from "./features/admin/ui/page/profileManage/ProfileManage.jsx";
+import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
 
 function App() {
 
@@ -47,7 +49,11 @@ function App() {
             <Route path={'/formAddMoneyAccount'} element={<FormAddMA/>}/>
             <Route path={'/updateMoneyAccount'} element={<FormUpdMA/>}/>
             <Route path={'/account_deposit'} element={<MaDeposit/>}/>
-                <Route path={'/account_withdraw'} element={<MaWithdraw />} />
+            <Route path={'/account_withdraw'} element={<MaWithdraw/>}/>
+
+            {/*Routes about admin panel*/}
+            <Route path={'/profileManage'} element={<ProfileManage/>}/>
+            <Route path={'/profile_info'} element={<ProfileInfo/>}/>
         </Routes>
     )
 }

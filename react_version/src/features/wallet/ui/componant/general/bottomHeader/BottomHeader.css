@@ -9,6 +9,7 @@
     height: 4rem;
     background-color: var(--blackColor);
     padding: .5rem;
+    z-index: 100;
 
     & ul{
         position: sticky;
