@@ -6,15 +6,20 @@ import Header from "../../../../wallet/ui/componant/general/header/Header.jsx";
 import BottomHeader from "../../../../wallet/ui/componant/general/bottomHeader/BottomHeader.jsx";
 import Hero from "../../../../wallet/ui/componant/general/hero/Hero.jsx";
 import creditOfferImg from "../../../../../assets/images/creditOfferIcon.png";
+import {useNavigate} from "react-router-dom";
 
 export default function ACreditOffer (){
     const [activeMenu, setActiveMenu] = useState("");
     const {isAuthenticated} = useAuth();
+    const navigate = useNavigate();
 
     if (!isAuthenticated) {
         return <div>Erreur : Veuillez revenir à la page précédente.</div>;
     }
 
+    const goToCrudPage = () =>{
+        navigate('/crud_offer');
+    }
 
     const handleMainMenu = () => {
         setActiveMenu("active");
@@ -37,7 +42,7 @@ export default function ACreditOffer (){
                     </figure>
                 </Hero>
                 <ul className="screen">
-                    <li className="offer">
+                    <li className="offer" onClick={goToCrudPage}>
                         <ul className="criteria">
                             <li>
                                 <b>TYPE:</b>
@@ -57,7 +62,7 @@ export default function ACreditOffer (){
                             </li>
                         </ul>
                     </li>
-                    <li className="offer">
+                    <li className="offer" onClick={goToCrudPage}>
                         <ul className="criteria">
                             <li>
                                 <b>TYPE:</b>
@@ -77,7 +82,7 @@ export default function ACreditOffer (){
                             </li>
                         </ul>
                     </li>
-                    <li className="offer">
+                    <li className="offer" onClick={goToCrudPage}>
                         <ul className="criteria">
                             <li>
                                 <b>TYPE:</b>
@@ -98,8 +103,8 @@ export default function ACreditOffer (){
                         </ul>
                     </li>
                 </ul>
-                <BottomHeader />
                 <a type="button" className="addMore">AJOUTER UNE OFFRE</a>
+                <BottomHeader />
             </main>
         </section>
     );
