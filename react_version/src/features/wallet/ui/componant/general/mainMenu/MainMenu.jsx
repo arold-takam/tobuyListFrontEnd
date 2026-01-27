@@ -31,7 +31,9 @@ export default function MainMenu({activeMenu, handleMenuClose}) {
                     <img src={imgLogo} alt="logo"/>
                     <div className="mark">ToBuyList</div>
                 </Link>
-                <figure className="menu" onClick={handleMenuClose}><img src={menuClose} alt="menu"/></figure>
+                <figure className="menu" onClick={handleMenuClose}>
+                    <img src={menuClose || ""} alt="menu"/>
+                </figure>
             </div>
             <Link to={`/profile`} className="profile">
                 <figure className="userProfile"><img src={userProfile || ""} alt="user"/></figure>
