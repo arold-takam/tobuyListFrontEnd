@@ -28,116 +28,119 @@ export default function ProfileInfo() {
         <div className="profileInfo">
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
-            <section className="allTransact">
-                <div className="upTitle">
-                    <img src={storyImg} alt="history picture"/>
-                    <h2>Son historique</h2>
-                </div>
-                <ul>
-                    <li>
-                        <figure><img src={tirelire || "#"} alt="deposit"/></figure>
-                        <div className="right">
-                            <div className="top">
-                                <h3>DEPOT</h3>
-                                <button type="button" className="status">Réussit</button>
+            <main>
+                <section className="allTransact">
+                    <div className="upTitle">
+                        <img src={storyImg} alt="history picture"/>
+                        <h2>Son historique</h2>
+                    </div>
+                    <ul>
+                        <li>
+                            <figure><img src={tirelire || "#"} alt="deposit"/></figure>
+                            <div className="right">
+                                <div className="top">
+                                    <h3>DEPOT</h3>
+                                    <button type="button" className="status">Réussit</button>
+                                </div>
+                                <div className="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
+                                        possimus, quia quod? Ex explicabo molestiae sequi voluptates.
+                                    </p>
+                                </div>
+                                <div className="chrono">
+                                    <div className="date"><p>Le <b>30/02/2025</b></p></div>
+                                    <div className="time"><p>À <b>30h70</b></p></div>
+                                </div>
                             </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
-                                    possimus, quia quod? Ex explicabo molestiae sequi voluptates.
-                                </p>
+                        </li>
+                        <li>
+                            <figure><img src={tirelire || "#"} alt="deposit"/></figure>
+                            <div className="right">
+                                <div className="top">
+                                    <h3>DEPOT</h3>
+                                    <button type="button" className="status">Réussit</button>
+                                </div>
+                                <div className="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
+                                        possimus, quia quod? Ex explicabo molestiae sequi voluptates.
+                                    </p>
+                                </div>
+                                <div className="chrono">
+                                    <div className="date"><p>Le <b>30/02/2025</b></p></div>
+                                    <div className="time"><p>À <b>30h70</b></p></div>
+                                </div>
                             </div>
-                            <div className="chrono">
-                                <div className="date"><p>Le <b>30/02/2025</b></p></div>
-                                <div className="time"><p>À <b>30h70</b></p></div>
+                        </li>
+                        <li>
+                            <figure><img src={tirelire || "#"} alt="deposit"/></figure>
+                            <div className="right">
+                                <div className="top">
+                                    <h3>DEPOT</h3>
+                                    <button type="button" className="status">Réussit</button>
+                                </div>
+                                <div className="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
+                                        possimus, quia quod? Ex explicabo molestiae sequi voluptates.
+                                    </p>
+                                </div>
+                                <div className="chrono">
+                                    <div className="date"><p>Le <b>30/02/2025</b></p></div>
+                                    <div className="time"><p>À <b>30h70</b></p></div>
+                                </div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <figure><img src={tirelire || "#"} alt="deposit"/></figure>
-                        <div className="right">
-                            <div className="top">
-                                <h3>DEPOT</h3>
-                                <button type="button" className="status">Réussit</button>
+                        </li>
+                        <li>
+                            <figure><img src={tirelire || ""} alt="deposit"/></figure>
+                            <div className="right">
+                                <div className="top">
+                                    <h3>DEPOT</h3>
+                                    <button type="button" className="status">Réussit</button>
+                                </div>
+                                <div className="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
+                                        possimus, quia quod? Ex explicabo molestiae sequi voluptates.
+                                    </p>
+                                </div>
+                                <div className="chrono">
+                                    <div className="date"><p>Le <b>30/02/2025</b></p></div>
+                                    <div className="time"><p>À <b>30h70</b></p></div>
+                                </div>
                             </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
-                                    possimus, quia quod? Ex explicabo molestiae sequi voluptates.
-                                </p>
+                        </li>
+                        <li>
+                            <figure><img src={tirelire || ""} alt="deposit"/></figure>
+                            <div className="right">
+                                <div className="top">
+                                    <h3>DEPOT</h3>
+                                    <button type="button" className="status">Réussit</button>
+                                </div>
+                                <div className="description">
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
+                                        possimus, quia quod? Ex explicabo molestiae sequi voluptates.
+                                    </p>
+                                </div>
+                                <div className="chrono">
+                                    <div className="date"><p>Le <b>30/02/2025</b></p></div>
+                                    <div className="time"><p>À <b>30h70</b></p></div>
+                                </div>
                             </div>
-                            <div className="chrono">
-                                <div className="date"><p>Le <b>30/02/2025</b></p></div>
-                                <div className="time"><p>À <b>30h70</b></p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <figure><img src={tirelire || "#"} alt="deposit"/></figure>
-                        <div className="right">
-                            <div className="top">
-                                <h3>DEPOT</h3>
-                                <button type="button" className="status">Réussit</button>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
-                                    possimus, quia quod? Ex explicabo molestiae sequi voluptates.
-                                </p>
-                            </div>
-                            <div className="chrono">
-                                <div className="date"><p>Le <b>30/02/2025</b></p></div>
-                                <div className="time"><p>À <b>30h70</b></p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <figure><img src={tirelire || ""} alt="deposit"/></figure>
-                        <div className="right">
-                            <div className="top">
-                                <h3>DEPOT</h3>
-                                <button type="button" className="status">Réussit</button>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
-                                    possimus, quia quod? Ex explicabo molestiae sequi voluptates.
-                                </p>
-                            </div>
-                            <div className="chrono">
-                                <div className="date"><p>Le <b>30/02/2025</b></p></div>
-                                <div className="time"><p>À <b>30h70</b></p></div>
-                            </div>
-                        </div>
-                    </li>
-                    <li>
-                        <figure><img src={tirelire || ""} alt="deposit"/></figure>
-                        <div className="right">
-                            <div className="top">
-                                <h3>DEPOT</h3>
-                                <button type="button" className="status">Réussit</button>
-                            </div>
-                            <div className="description">
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor error natus odit
-                                    possimus, quia quod? Ex explicabo molestiae sequi voluptates.
-                                </p>
-                            </div>
-                            <div className="chrono">
-                                <div className="date"><p>Le <b>30/02/2025</b></p></div>
-                                <div className="time"><p>À <b>30h70</b></p></div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </section>
-            <section className="delUser">
-                <a>
-                    <p>SUPPRIMER CET UTILISATEUR</p>
-                    <img src={delIcon} alt="Delete icon"/>
-                </a>
-            </section>
-            <BottomHeader />
+                        </li>
+                    </ul>
+                </section>
+                <section className="delUser">
+                    <a>
+                        <p>SUPPRIMER CET UTILISATEUR</p>
+                        <img src={delIcon} alt="Delete icon"/>
+                    </a>
+                </section>
+                <BottomHeader />
+            </main>
+
         </div>
     );
 }

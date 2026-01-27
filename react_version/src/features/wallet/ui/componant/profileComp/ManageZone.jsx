@@ -26,14 +26,14 @@ export default function ManageZone(){
                         </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to={'/creditOffer_management'}>
                             <figure><img src={cdOfferIcon} alt="credit offer icon"/>
                             </figure>
                             <p>
                                 <b>Gestion Des Offres De Credit</b>
                                 <span> &gt; </span>
                             </p>
-                        </a>
+                        </Link>
                     </li>
                     <li>
                         <a href="#">
