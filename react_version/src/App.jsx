@@ -21,6 +21,7 @@ import MaDeposit from "./features/moneyAccount/ui/page/formDeposit/MaDeposit.jsx
 import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.jsx";
 import ProfileManage from "./features/admin/ui/page/profileManage/ProfileManage.jsx";
 import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
+import ACreditOffer from "./features/admin/ui/page/aCreditOffer/ACreditOffer.jsx";
 
 function App() {
 
@@ -54,6 +55,7 @@ function App() {
             {/*Routes about admin panel*/}
             <Route path={'/profileManage'} element={<ProfileManage/>}/>
             <Route path={'/profile_info'} element={<ProfileInfo/>}/>
+            <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
         </Routes>
     )
 }

@@ -1,5 +1,5 @@
-import {Link} from "react-router-dom";
 import './MainMenu.css'
+import {Link} from "react-router-dom";
 
 import imgLogo from '../../../../../../assets/images/imgLogo.png';
 import userProfile from '../../../../../../assets/images/userProfile.png';
