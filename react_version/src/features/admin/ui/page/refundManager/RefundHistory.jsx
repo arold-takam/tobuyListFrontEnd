@@ -1,14 +1,13 @@
-import './ProfileInfo.css';
+import '../profileInfo/ProfileInfo.jsx';
 import MainMenu from "../../../../wallet/ui/componant/general/mainMenu/MainMenu.jsx";
 import Header from "../../../../wallet/ui/componant/general/header/Header.jsx";
 import BottomHeader from "../../../../wallet/ui/componant/general/bottomHeader/BottomHeader.jsx";
 import {useState} from "react";
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import tirelire from "../../../../../assets/images/Tirelire.png";
-import delIcon from "../../../../../assets/images/delete.png";
 import storyImg from "../../../../../assets/images/story.png";
 
-export default function ProfileInfo() {
+export default function RefundHistory() {
 
     const [activeMenu, setActiveMenu] = useState("");
     const {isAuthenticated} = useAuth();
@@ -32,7 +31,7 @@ export default function ProfileInfo() {
                 <section className="allTransact">
                     <div className="upTitle">
                         <img src={storyImg} alt="history picture"/>
-                        <h2>Son historique</h2>
+                        <h2> His refund history </h2>
                     </div>
                     <ul>
                         <li>
@@ -131,12 +130,6 @@ export default function ProfileInfo() {
                             </div>
                         </li>
                     </ul>
-                </section>
-                <section className="delUser">
-                    <a>
-                        <p>SUPPRIMER CET UTILISATEUR</p>
-                        <img src={delIcon} alt="Delete icon"/>
-                    </a>
                 </section>
                 <BottomHeader />
             </main>

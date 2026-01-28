@@ -7,10 +7,11 @@
     scroll-behavior: smooth;
 
     & main{
-        left: 0;
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 1rem;
         width: 100%;
 
         & .accountList{
