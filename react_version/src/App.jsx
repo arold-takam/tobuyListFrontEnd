@@ -24,6 +24,7 @@ import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
 import ACreditOffer from "./features/admin/ui/page/aCreditOffer/ACreditOffer.jsx";
 import CrudOffer from "./features/admin/ui/page/aCrudOffer/CrudOffer.jsx";
 import UpdateOffer from "./features/admin/ui/page/aUpdOffer/UpdateOffer.jsx";
+import AddOffer from "./features/admin/ui/page/aAddOffer/AddOffer.jsx";
 
 function App() {
 
@@ -60,6 +61,7 @@ function App() {
             <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
             <Route path={'/crud_offer'} element={<CrudOffer/>}/>
             <Route path={'/update_offer'} element={<UpdateOffer/>}/>
+            <Route path={'/add_offer'} element={<AddOffer/>}/>
         </Routes>
     )
 }
