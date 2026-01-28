@@ -28,13 +28,13 @@ export default function ProfileManage() {
         <div className={"profileManage"}>
             <MainMenu activeMenu={activeMenu} handleMenuClose={handleMenuClose} />
             <Header handleMainMenu={handleMainMenu} />
+            <Hero>
+                <h1>GESTION DES COMPTES</h1>
+                <figure>
+                    <img src={manageAccount || "#"} alt="Account picture"/>
+                </figure>
+            </Hero>
             <main>
-                <Hero>
-                    <h1>GESTION DES COMPTES</h1>
-                    <figure>
-                        <img src={manageAccount || "#"} alt="Account picture"/>
-                    </figure>
-                </Hero>
                 <div className="accountList">
                     <div className="filter">
                         <h2>Liste des comptes</h2>
