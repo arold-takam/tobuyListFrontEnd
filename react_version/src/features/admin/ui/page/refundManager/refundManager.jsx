@@ -6,7 +6,8 @@ import BottomHeader from "../../../../wallet/ui/componant/general/bottomHeader/B
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import Hero from "../../../../wallet/ui/componant/general/hero/Hero.jsx";
 import userProfil from "../../../../../assets/images/userProfile.png";
-import manageAccount from "../../../../../assets/images/manage_accounts.png";
+import returnIcon from '../../../../../assets/images/Remboursement.png';
+import {Link} from "react-router-dom";
 
 export default function RefundManager() {
     const [activeMenu, setActiveMenu] = useState("");
@@ -32,42 +33,58 @@ export default function RefundManager() {
                 <Hero>
                     <h1>GESTION DES REMBOURSEMENTS</h1>
                     <figure>
-                        <img src={manageAccount || "#"} alt="Account picture"/>
+                        <img src={returnIcon || "#"} alt="Account picture"/>
                     </figure>
                 </Hero>
                 <div className="accountList">
                     <ul className="list">
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
-                        <li className={"linkProfile"}>
-                            <img src={userProfil || ""} alt="profile picture"/>
-                            <p>The username</p>
+                        <li>
+                            <Link to={'/refundHistory'} href="#" className={"linkProfile"}>
+                                <img src={userProfil || ""} alt="profile picture"/>
+                                <p>The username</p>
+                            </Link>
                         </li>
                     </ul>
                 </div>

@@ -26,6 +26,8 @@ import BorrowManager from "./features/admin/ui/page/borrowManager/BorrowManager.
 import RefundManager from "./features/admin/ui/page/refundManager/refundManager.jsx";
 import CrudOffer from "./features/admin/ui/page/aCrudOffer/CrudOffer.jsx";
 import UpdateOffer from "./features/admin/ui/page/aUpdOffer/UpdateOffer.jsx";
+import RefundHistory from "./features/admin/ui/page/refundManager/RefundHistory.jsx";
+import BorrowHistory from "./features/admin/ui/page/borrowManager/BorrowHistory.jsx";
 
 function App() {
 
@@ -60,11 +62,13 @@ function App() {
             <Route path={'/profileManage'} element={<ProfileManage/>}/>
             <Route path={'/profile_info'} element={<ProfileInfo/>}/>
             <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
-                <Route path={'/BorrowManager'} element={<BorrowManager/>}/>
-                <Route path={'/RefundManager'} element={<RefundManager/>}/>
+            <Route path={'/BorrowManager'} element={<BorrowManager/>}/>
+            <Route path={'/RefundManager'} element={<RefundManager/>}/>
 
             <Route path={'/crud_offer'} element={<CrudOffer/>}/>
             <Route path={'/update_offer'} element={<UpdateOffer/>}/>
+            <Route path={'/refundHistory'} element={<RefundHistory/>}/>
+            <Route path={'/borrowHistory'} element={<BorrowHistory/>}/>
         </Routes>
     )
 }

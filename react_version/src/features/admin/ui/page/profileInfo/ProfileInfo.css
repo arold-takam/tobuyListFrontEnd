@@ -50,6 +50,7 @@
                     color: var(--mainColor);
                     font-size: xx-large;
                 }
+
             }
 
             & ul{
@@ -195,5 +196,6 @@
                 }
             }
         }
+
     }
 }
