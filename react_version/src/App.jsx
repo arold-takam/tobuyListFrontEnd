@@ -22,6 +22,8 @@ import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.
 import ProfileManage from "./features/admin/ui/page/profileManage/ProfileManage.jsx";
 import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
 import ACreditOffer from "./features/admin/ui/page/aCreditOffer/ACreditOffer.jsx";
+import BorrowManager from "./features/admin/ui/page/borrowManager/BorrowManager.jsx";
+import RefundManager from "./features/admin/ui/page/refundManager/refundManager.jsx";
 import CrudOffer from "./features/admin/ui/page/aCrudOffer/CrudOffer.jsx";
 import UpdateOffer from "./features/admin/ui/page/aUpdOffer/UpdateOffer.jsx";
 import AddOffer from "./features/admin/ui/page/aAddOffer/AddOffer.jsx";
@@ -59,6 +61,9 @@ function App() {
             <Route path={'/profileManage'} element={<ProfileManage/>}/>
             <Route path={'/profile_info'} element={<ProfileInfo/>}/>
             <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
+                <Route path={'/BorrowManager'} element={<BorrowManager/>}/>
+                <Route path={'/RefundManager'} element={<RefundManager/>}/>
+
             <Route path={'/crud_offer'} element={<CrudOffer/>}/>
             <Route path={'/update_offer'} element={<UpdateOffer/>}/>
             <Route path={'/add_offer'} element={<AddOffer/>}/>

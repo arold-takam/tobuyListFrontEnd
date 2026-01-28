@@ -36,22 +36,22 @@ export default function ManageZone(){
                         </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to={'/BorrowManager'}>
                             <figure><img src={borrowIcon} alt="borrow Icon"/></figure>
                             <p>
                                 <b>Gestion Des Emprunts</b>
                                 <span> &gt; </span>
                             </p>
-                        </a>
+                        </Link>
                     </li>
                     <li>
-                        <a href="#">
+                        <Link to={'/refundManager'}>
                             <figure><img src={returnIcon} alt="return icon"/></figure>
                             <p>
                                 <b>Gestion Des Remboursements</b>
                                 <span> &gt; </span>
                             </p>
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
