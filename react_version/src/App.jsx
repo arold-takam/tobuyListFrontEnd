@@ -22,6 +22,8 @@ import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.
 import ProfileManage from "./features/admin/ui/page/profileManage/ProfileManage.jsx";
 import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
 import ACreditOffer from "./features/admin/ui/page/aCreditOffer/ACreditOffer.jsx";
+import BorrowManager from "./features/admin/ui/page/borrowManager/BorrowManager.jsx";
+import RefundManager from "./features/admin/ui/page/refundManager/refundManager.jsx";
 
 function App() {
 
@@ -56,6 +58,9 @@ function App() {
             <Route path={'/profileManage'} element={<ProfileManage/>}/>
             <Route path={'/profile_info'} element={<ProfileInfo/>}/>
             <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
+                <Route path={'/BorrowManager'} element={<BorrowManager/>}/>
+                <Route path={'/RefundManager'} element={<RefundManager/>}/>
+
         </Routes>
     )
 }
