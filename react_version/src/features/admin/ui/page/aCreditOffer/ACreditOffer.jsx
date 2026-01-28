@@ -6,7 +6,7 @@ import Header from "../../../../wallet/ui/componant/general/header/Header.jsx";
 import BottomHeader from "../../../../wallet/ui/componant/general/bottomHeader/BottomHeader.jsx";
 import Hero from "../../../../wallet/ui/componant/general/hero/Hero.jsx";
 import creditOfferImg from "../../../../../assets/images/creditOfferIcon.png";
-import {useNavigate} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function ACreditOffer (){
     const [activeMenu, setActiveMenu] = useState("");
@@ -103,7 +103,7 @@ export default function ACreditOffer (){
                         </ul>
                     </li>
                 </ul>
-                <a type="button" className="addMore">AJOUTER UNE OFFRE</a>
+                <Link to={'/add_offer'} type="button" className="addMore">AJOUTER UNE OFFRE</Link>
                 <BottomHeader />
             </main>
         </section>

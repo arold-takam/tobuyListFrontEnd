@@ -28,6 +28,7 @@ import CrudOffer from "./features/admin/ui/page/aCrudOffer/CrudOffer.jsx";
 import UpdateOffer from "./features/admin/ui/page/aUpdOffer/UpdateOffer.jsx";
 import RefundHistory from "./features/admin/ui/page/refundManager/RefundHistory.jsx";
 import BorrowHistory from "./features/admin/ui/page/borrowManager/BorrowHistory.jsx";
+import AddOffer from "./features/admin/ui/page/aAddOffer/AddOffer.jsx";
 
 function App() {
 
@@ -67,6 +68,7 @@ function App() {
 
             <Route path={'/crud_offer'} element={<CrudOffer/>}/>
             <Route path={'/update_offer'} element={<UpdateOffer/>}/>
+            <Route path={'/add_offer'} element={<AddOffer/>}/>
             <Route path={'/refundHistory'} element={<RefundHistory/>}/>
             <Route path={'/borrowHistory'} element={<BorrowHistory/>}/>
         </Routes>
