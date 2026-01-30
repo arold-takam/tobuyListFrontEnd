@@ -19,6 +19,16 @@ import ProfileUpdate from "./features/wallet/ui/page/profileUpd/ProfileUpdate.js
 import FormUpdMA from "./features/moneyAccount/ui/page/formUpd/FormUpdMA.jsx";
 import MaDeposit from "./features/moneyAccount/ui/page/formDeposit/MaDeposit.jsx";
 import MaWithdraw from "./features/moneyAccount/ui/page/formWithdraw/MaWithdraw.jsx";
+import ProfileManage from "./features/admin/ui/page/profileManage/ProfileManage.jsx";
+import ProfileInfo from "./features/admin/ui/page/profileInfo/ProfileInfo.jsx";
+import ACreditOffer from "./features/admin/ui/page/aCreditOffer/ACreditOffer.jsx";
+import BorrowManager from "./features/admin/ui/page/borrowManager/BorrowManager.jsx";
+import RefundManager from "./features/admin/ui/page/refundManager/refundManager.jsx";
+import CrudOffer from "./features/admin/ui/page/aCrudOffer/CrudOffer.jsx";
+import UpdateOffer from "./features/admin/ui/page/aUpdOffer/UpdateOffer.jsx";
+import RefundHistory from "./features/admin/ui/page/refundManager/RefundHistory.jsx";
+import BorrowHistory from "./features/admin/ui/page/borrowManager/BorrowHistory.jsx";
+import AddOffer from "./features/admin/ui/page/aAddOffer/AddOffer.jsx";
 
 function App() {
 
@@ -47,7 +57,20 @@ function App() {
             <Route path={'/formAddMoneyAccount'} element={<FormAddMA/>}/>
             <Route path={'/updateMoneyAccount'} element={<FormUpdMA/>}/>
             <Route path={'/account_deposit'} element={<MaDeposit/>}/>
-                <Route path={'/account_withdraw'} element={<MaWithdraw />} />
+            <Route path={'/account_withdraw'} element={<MaWithdraw/>}/>
+
+            {/*Routes about admin panel*/}
+            <Route path={'/profileManage'} element={<ProfileManage/>}/>
+            <Route path={'/profile_info'} element={<ProfileInfo/>}/>
+            <Route path={'/creditOffer_management'} element={<ACreditOffer/>}/>
+            <Route path={'/BorrowManager'} element={<BorrowManager/>}/>
+            <Route path={'/RefundManager'} element={<RefundManager/>}/>
+
+            <Route path={'/crud_offer'} element={<CrudOffer/>}/>
+            <Route path={'/update_offer'} element={<UpdateOffer/>}/>
+            <Route path={'/add_offer'} element={<AddOffer/>}/>
+            <Route path={'/refundHistory'} element={<RefundHistory/>}/>
+            <Route path={'/borrowHistory'} element={<BorrowHistory/>}/>
         </Routes>
     )
 }

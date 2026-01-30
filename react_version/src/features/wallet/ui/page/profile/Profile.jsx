@@ -1,6 +1,6 @@
+import './Profile.css';
 import {useAuth} from "../../../../../contextGlobal/authContext/useAuth.js";
 import {useState} from "react";
-import './Profile.css';
 
 import MainMenu from "../../componant/general/mainMenu/MainMenu.jsx";
 import Header from "../../componant/general/header/Header.jsx";
