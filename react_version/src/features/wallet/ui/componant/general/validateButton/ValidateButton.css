@@ -23,3 +23,20 @@
         cursor: pointer;
     }
 }
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .validate{
+        font-size: large;
+
+        & .button{
+            padding: 1rem;
+        }
+
+        &:hover{
+            border: 1px solid var(--secondaryColor);
+        }
+    }
+
+}

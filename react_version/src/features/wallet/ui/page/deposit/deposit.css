@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
     & .active{
@@ -67,6 +68,41 @@
                 outline: none;
                 padding: 2rem 1rem;
             }
+        }
+
+    }
+
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .deposit{
+
+        & form{
+            gap: 2rem;
+            width: 768px;
+
+            & .put, .details{
+
+                & label{
+                    font-size: large;
+                }
+            }
+            & .put{
+                height: 5rem;
+
+                & input{
+                    font-size: large;
+                }
+            }
+            & .details{
+
+                & textarea{
+                    font-size: large
+                }
+            }
+
         }
 
     }

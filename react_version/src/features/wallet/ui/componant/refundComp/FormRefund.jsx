@@ -16,7 +16,7 @@ export default function FormRefund() {
             </div>
             <div className="details">
                 <label htmlFor="description">
-                    Associez Une Description A Votre Remboursement
+                    Description Du Remboursement
                 </label>
                 <textarea name="description" id="description"></textarea>
             </div>

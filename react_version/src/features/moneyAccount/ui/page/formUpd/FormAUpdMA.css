@@ -98,3 +98,18 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .updMa{
+        gap: 2rem;
+
+        & .addForm{
+            gap: 3rem;
+            width: 768px;
+            padding: 2rem;
+        }
+    }
+
+}
