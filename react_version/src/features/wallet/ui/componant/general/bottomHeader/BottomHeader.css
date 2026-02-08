@@ -51,3 +51,12 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN------------------------------------------*/
+@media(min-width: 1024px) {
+
+    & .bottomHeader{
+        padding: 0 4rem;
+    }
+
+}

@@ -98,3 +98,37 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .addMa{
+
+        & h1{
+            color: var(--whiteColor);
+            text-align: center;
+        }
+
+        & .addForm{
+            gap: 2rem;
+            width: 768px;
+            padding: 2rem;
+
+            & div{
+                gap: 1rem;
+
+                & input, & select{
+                    height: 4rem;
+                }
+            }
+
+            & .cta{
+
+                & .back, & .create{
+                    height: 4rem;
+                }
+            }
+        }
+    }
+
+}
