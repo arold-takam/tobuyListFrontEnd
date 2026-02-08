@@ -8,7 +8,7 @@ export default function Login() {
     const [landHederType, _] = useState("signUp");
 
     return (
-        <div className="register">
+        <div className="loginPage">
             <HeaderLanding typeHeader={landHederType}/>
             <div className="main">
                 <h1>ToBuyList</h1>
