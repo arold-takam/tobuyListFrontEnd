@@ -94,3 +94,17 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+    & .profileUpd{
+
+        & .update{
+            width: 768px;
+
+            & .put {
+                height: 4rem;
+            }
+        }
+    }
+}

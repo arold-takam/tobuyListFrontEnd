@@ -91,3 +91,17 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .maDeposit{
+        gap: 4rem;
+
+        & .dep{
+            width: 768px;
+            gap: 3rem;
+        }
+    }
+
+}

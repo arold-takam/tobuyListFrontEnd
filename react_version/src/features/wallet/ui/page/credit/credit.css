@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
     & .active{
@@ -18,7 +19,7 @@
         background-color: var(--whiteColor);
         border-radius: 1rem;
         box-shadow: 0 0 8px 1px rgba(83,109,254,0.5);
-        padding: 1.7rem;
+        padding: 1rem;
         margin: 1rem 0 6rem;
 
         & .offerType{
@@ -56,7 +57,7 @@
                     justify-content: center;
                     gap: 2rem;
                     width: max-content;
-                    padding: 1rem;
+                    padding: 1rem 0;
 
                     & li{
                         flex-shrink: 0;
@@ -64,10 +65,10 @@
                         flex-direction: column;
                         align-items: center;
                         gap: 1rem;
-                        width: 16.8rem;
+                        width: 18rem;
                         background-color: var(--secondaryColor);
                         border-radius: 1.2rem;
-                        padding: 1rem 1.5rem;
+                        padding: 1rem;
                         transition: all 1s ease;
 
                         & .number{
@@ -189,6 +190,57 @@
                 }
             }
         }
+    }
+
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .credit{
+
+        & .borrowForm{
+            width: 768px;
+            padding: 1.7rem;
+
+            & .offerType{
+
+                & h2{
+                    font-size: x-large;
+                }
+
+                & .screen{
+
+                    & ul{
+                        gap: 2rem;
+
+                        & li{
+                            gap: 1rem;
+                            width: 24rem;
+
+                            & .number{
+                                width: 1.8rem;
+                                font-size: large;
+                            }
+
+                            & h3{
+                                font-size: x-large;
+                            }
+
+                            & .details{
+                                gap: 1.5rem;
+
+                                & div{
+                                    font-size: large;
+                                }
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
     }
 
 }

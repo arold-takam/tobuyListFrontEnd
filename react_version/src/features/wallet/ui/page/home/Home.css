@@ -7,6 +7,7 @@
     justify-content: center;
     width: 100%;
     height: auto;
+    background-color: var(--secondaryColor);
     overflow: hidden scroll;
     scroll-behavior: smooth;
 
@@ -165,18 +166,6 @@
                         padding: 1rem;
                         transition: all 1s ease;
                     }
-
-                    /*&:hover{
-                        background-color: var(--secondaryColor);
-
-                        & button{
-                            background-color: var(--mainColor);
-                            color: var(--whiteColor);
-                            cursor: pointer;
-                            font-weight: bold;
-                            text-transform: uppercase;
-                        }
-                    }*/
                 }
             }
         }
@@ -359,4 +348,149 @@
             }
         }
     }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+/*RESPONSIVE DESIGN------------------------------------------*/
+@media(min-width: 1024px) {
+
+    & .home{
+
+        & main{
+
+            & .clientSide{
+                width: 768px;
+
+                & .cardSide{
+
+                    & .card{
+                        width: 72%;
+                    }
+                }
+
+                & .transact{
+
+                    & .operation{
+                        gap: 1rem;
+                        padding: 1rem;
+
+                        & .opp{
+                            gap: 1rem;
+                            padding: 1rem;
+
+                            & figure{
+                                height: 8rem;
+                                padding: 1rem;
+                            }
+
+                            & button{
+                                font-size: large;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .info{
+                padding-bottom: 4rem;
+
+                & .top{
+                    padding: 0 4rem;
+
+                    & .allBtn{
+                        font-weight: 570;
+                    }
+                }
+
+                & .slider{
+                    padding: 1rem 0;
+
+                    & ul{
+                        gap: 2rem;
+                        height: 36rem;
+                        padding: 2rem;
+
+                        & li{
+                            border-radius: 2rem;
+                            padding: 1rem;
+
+                            & .see{
+                                font-size: larger;
+                                padding: 1rem 3rem;
+                            }
+
+                            & .new{
+                                width: 100%;
+                                min-height: 4rem;
+                                padding: 1rem;
+
+                                & p{
+                                    font-size: large;
+                                }
+                            }
+                        }
+                    }
+
+                    & .btn{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 1rem;
+                        height: 4rem;
+                        background-color: var(--smallWhite);
+                        border-radius: 1rem;
+                        overflow: hidden;
+                        padding: 0.5rem 1rem;
+
+                        & button{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 100%;
+                            aspect-ratio: 4/3;
+                            background-color: transparent;
+                            border: none;
+                            transition: all 1s ease;
+
+                            &:hover{
+                                cursor: pointer;
+                                scale: 1.2;
+                            }
+                        }
+                        & .left{
+                            transform: rotate(180deg);
+                        }
+
+                        & .paginator{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            height: 80%;
+                            background-color: var(--whiteColor);
+                            border-radius: 1rem;
+                            padding: 0 2rem;
+
+                            & p{
+                                display: flex;
+                                align-items: center;
+                                word-spacing: 0.5rem;
+                            }
+                        }
+
+                        &:hover{
+
+                            & .paginator{
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

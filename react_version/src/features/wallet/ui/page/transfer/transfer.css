@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
 
@@ -19,7 +20,7 @@
         background-color: var(--whiteColor);
         border-radius: 1.5rem;
         box-shadow: 0 0 8px 1px rgba(83,109,254,0.5);
-        padding: 2rem;
+        padding: 2rem 1rem;
         margin: 1rem 0 2rem;
 
     }
@@ -90,6 +91,50 @@
                 text-align: center;
             }
         }
+    }
+
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .transfer{
+
+        & .transfertForm{
+            width: 768px;
+            padding: 2rem;
+        }
+
+        & .scan{
+            width: 768px;
+
+            & .text{
+
+                & h4{
+                    font-size: xx-large;
+                }
+
+                & p{
+                    font-size: larger;
+                }
+            }
+
+            & .scanItem{
+
+                & figure{
+                    height: 80%;
+
+                    & img{
+                        width: 80%;
+                    }
+                }
+
+                & h5{
+                    font-size: larger;
+                }
+            }
+        }
+
     }
 
 }

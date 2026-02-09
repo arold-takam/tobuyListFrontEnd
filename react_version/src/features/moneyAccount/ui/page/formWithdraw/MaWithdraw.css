@@ -91,3 +91,17 @@
         }
     }
 }
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .maWithdraw{
+        gap: 4rem;
+
+        & .withdrawForm{
+            width: 768px;
+            gap: 3rem;
+        }
+    }
+
+}

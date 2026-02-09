@@ -11,7 +11,7 @@
     overflow: hidden;
 
     & .select{
-        width: 5rem;
+        width: 8rem;
         aspect-ratio: 3/2;
         background-color: var(--secondaryColor);
         border-right: 1px solid var(--mainColor);
@@ -48,19 +48,42 @@
 
     & label{
         position: absolute;
-        top: 0.75rem;
-        left: 6rem;
+        top: 1rem;
+        left: 7.5rem;
         color: var(--smallBlack);
-        font-size: x-small;
+        font-size: .8rem;
+        text-align: left;
         transform: translateY(-50%);
     }
 
     & input{
         width: calc(100% - 5rem);
-        height: 100%;
+        min-height: 4rem;
         border: none;
         font-size: small;
         outline: none;
-        padding: 1rem 1rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
     }
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .pay{
+
+        & .select{
+        }
+
+        & label{
+            left: 9rem;
+            font-size: large;
+        }
+
+        & input{
+            width: calc(100% - 8rem);
+            font-size: large;
+        }
+    }
+
 }

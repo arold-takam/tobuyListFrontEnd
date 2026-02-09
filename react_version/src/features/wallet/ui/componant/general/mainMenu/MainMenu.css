@@ -409,7 +409,20 @@
             color: var(--whiteColor);
         }
     }
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
 }
 & .active{
     transform: translateX(0);
+}
+
+/*RESPONSIVE DESIGN------------------------------------------*/
+@media(min-width: 1024px) {
+
+    & .mainMenu{
+        width: 768px;
+    }
+
 }

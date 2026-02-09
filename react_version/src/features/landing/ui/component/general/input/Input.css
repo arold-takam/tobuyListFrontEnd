@@ -34,3 +34,17 @@
     }
 
 }
+
+/*RESPONSIVE MANAGEMENT(Large Screen Version)----------------------------------*/
+
+@media(min-width: 1024px) {
+
+    & .put{
+        height: 3.5rem;
+
+        & label{
+            font-size: large;
+        }
+    }
+
+}

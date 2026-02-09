@@ -102,11 +102,6 @@
             text-align: center;
             text-decoration: none;
             padding: 1rem 1.5rem;
-        }
-        & .login{
-            display: none;
-        }
-        & .registerBtn{
             border: 2px solid var(--mainColor);
             color: var(--mainColor);
             transition: all 1s ease;
@@ -115,6 +110,9 @@
                 background-color: var(--mainColor);
                 color: var(--whiteColor);
             }
+        }
+        & .login{
+            display: none;
         }
     }
 }
@@ -157,14 +155,13 @@
              text-align: center;
              text-decoration: none;
              padding: 1rem 1.5rem;
-         }
-         & .login{
-             background-color: var(--mainColor);
-             color: var(--whiteColor);
+             border: 2px solid var(--mainColor);
+             color: var(--mainColor);
              transition: all 1s ease;
 
              &:hover{
-                 border: 1px solid var(--whiteColor);
+                 background-color: var(--mainColor);
+                 color: var(--whiteColor);
              }
          }
          & .registerBtn{
@@ -172,3 +169,20 @@
          }
      }
  }
+
+/*RESPONSIVE WORKING----------------------------------------------------*/
+
+@media(min-width: 1024px){
+
+    & .all{
+        padding: 0 4rem;
+
+        & .authCta {
+            gap: 8rem;
+        }
+    }
+
+    & .signUp, & .signIn{
+        padding: 0 4rem;
+    }
+}

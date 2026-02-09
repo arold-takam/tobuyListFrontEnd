@@ -4,7 +4,7 @@ import imgLogo from "../../../../../assets/images/imgLogo.png";
 
 export default function AddOffer() {
     return (
-        <section className="updateOffer">
+        <section className="addOffer">
             <div className="top">
                 <Link to="/home" className="logo">
                     <img src={imgLogo} alt="logo"/>
