@@ -14,8 +14,8 @@ export default function AddOffer() {
             <form className="add">
                 <div className="field">
                     <label htmlFor="type">Choisir le type</label>
-                    <select name="type" id="type" className="type">
-                        <option value="default" selected disabled>--(Cliquez Ici)--</option>
+                    <select name="type" id="type" className="type" defaultValue = "default">
+                        <option value="default" disabled>--(Cliquez Ici)--</option>
                         <option value="VIP">VIP</option>
                         <option value="STANDARD">Standard</option>
                         <option value="CUSTOM">Custom</option>

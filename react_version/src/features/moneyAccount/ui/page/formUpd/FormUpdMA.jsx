@@ -12,6 +12,8 @@ export default function FormUpdMA() {
     const location = useLocation();
     const {account} = location.state || {};
 
+    const [password, setPassword] = useState("");
+
     const {loading,  error, update} = UseMAUpdate();
     const [formData, setFormData] = useState({
         id: account.id,
@@ -22,6 +24,11 @@ export default function FormUpdMA() {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if(password !== formData.oldPassword){
+            alert("Passwords don't match");
+            return;
+        }
 
         try{
             await update(formData);
@@ -37,6 +44,10 @@ export default function FormUpdMA() {
         setFormData({...formData, [e.target.name]: e.target.value});
     }
 
+    const handleChangePassword = (e) => {
+        setPassword(e.target.value);
+    }
+
     return (
         <div className={`updMa`} >
             <h1>Update your money account</h1>
@@ -44,7 +55,7 @@ export default function FormUpdMA() {
                 {error && <p style={{color: 'red', fontWeight: 'bold'}}>{error}</p>}
                 <div className="putZone">
                     <label htmlFor="oldPassword">Your old password</label>
-                    <input type={"password"} name="oldPassword" value={formData.oldPassword} id="oldPassword" className="oldPassword" onChange={handleChange} readOnly/>
+                    <input type={"password"} name="oldPassword"  id="oldPassword" className="oldPassword" value={password} onChange={handleChangePassword} />
                 </div>
                 <div className="putZone">
                     <label htmlFor="newPassword">Enter the new password</label>

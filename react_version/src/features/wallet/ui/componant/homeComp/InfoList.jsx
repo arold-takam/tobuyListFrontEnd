@@ -23,9 +23,7 @@ export default function InfoList() {
     ]
 
     const [currentPage, setCurrentPage] = useState(1);
-
     const screenRef = useRef(null);
-
     const totalPages = news.length;
 
     const goToNext = useCallback(() => {
@@ -33,7 +31,7 @@ export default function InfoList() {
             if (currentPage < totalPages) {
                 screenRef.current.scrollBy({ left: screenRef.current.offsetWidth, behavior: "smooth" });
             } else {
-                // Loop back to the start if at the end
+
                 screenRef.current.scrollTo({ left: 0, behavior: "smooth" });
             }
         }
@@ -44,18 +42,6 @@ export default function InfoList() {
             screenRef.current.scrollBy({ left: -screenRef.current.offsetWidth, behavior: "smooth" });
         }
     }, [currentPage]);
-    
-    // const goToNext = () => {
-    //     if (screenRef.current && currentPage < totalPages) {
-    //         screenRef.current.scrollBy({ left: screenRef.current.offsetWidth, behavior: "smooth" });
-    //     }
-    // };
-    //
-    // const goToPrev = () => {
-    //     if (screenRef.current && currentPage > 1) {
-    //         screenRef.current.scrollBy({ left: -screenRef.current.offsetWidth, behavior: "smooth" });
-    //     }
-    // };
 
     useEffect(() => {
         const interval = setInterval(() => {
