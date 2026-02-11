@@ -29,7 +29,7 @@ export default function LoginForm() {
     };
 
     return (
-        <form className="registerForm" onSubmit={handleSubmit}>
+        <form className="loginForm" onSubmit={handleSubmit}>
             {error && <p style={{color: 'red', fontWeight: 'bold'}}>{error}</p>}
             <Input typeInput={"text"} nameInput={"username"} value={formData.username} onChange = {handleChange} />
             <Input typeInput={"password"} nameInput={"password"} value={formData.password} onChange = {handleChange} />

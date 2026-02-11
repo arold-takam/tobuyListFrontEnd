@@ -1,9 +1,9 @@
-.aCreditOffer{
+& .aCreditOffer{
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100dvh;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
     & main {
@@ -13,7 +13,6 @@
         align-items: center;
         gap: 1rem;
         width: 100%;
-        height: 200dvh;
         padding-bottom: 5rem;
 
         & .screen{
@@ -82,4 +81,16 @@
             text-decoration: none;
         }
     }
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .aCreditOffer{
+
+        & main {
+            width: 768px;
+        }
+    }
+
 }

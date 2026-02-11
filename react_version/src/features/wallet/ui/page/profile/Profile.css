@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100dvh;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
     & main{
@@ -363,5 +363,17 @@
             }
         }
     }
+}
+
+/*RESPONSIVE DESIGN-------------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .profile{
+
+        & main{
+            width: 768px;
+        }
+    }
+
 }
 

@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 100dvh;
+    background-color: var(--secondaryColor);
     scroll-behavior: smooth;
 
     & main {
@@ -160,6 +160,10 @@
                     }
                 }
             }
+
+            &::-webkit-scrollbar{
+                display: none;
+            }
         }
 
         & .delUser{
@@ -198,4 +202,24 @@
         }
 
     }
+}
+
+/*RESPONSIVE DESIGN-----------------------------------------------------------------*/
+@media (min-width: 1024px) {
+
+    & .profileInfo{
+
+        & main {
+            width: 768px;
+
+            & .allTransact{
+
+                & .upTitle{
+                    width: 768px;
+                }
+            }
+
+        }
+    }
+
 }

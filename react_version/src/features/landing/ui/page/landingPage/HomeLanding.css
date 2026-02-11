@@ -117,6 +117,10 @@
                         }
                     }
                 }
+
+                &::-webkit-scrollbar{
+                    display: none;
+                }
             }
 
             & .paginator{
@@ -309,75 +313,26 @@
 
 }
 
-/*RESPONSIVE MANAGEMENT(Large Screen Version)----------------------------------*/
+/*RESPONSIVE WORKING------------------------------------------------------------------*/
 
 @media(min-width: 1024px) {
+
     & .homeLanding{
-        & header{
-            padding: 0 16rem;
-
-            & .linkPage{
-
-                & img{
-                    height: 80%;
-                }
-            }
-
-            & .authCta{
-                gap: 8rem;
-
-                & a{
-                    padding: 1rem 4rem;
-                }
-            }
-        }
 
         & .main{
+            width: 50%;
 
             & article{
-                flex-direction: row;
-                justify-content: center;
 
                 & .lineArticle{
-                    flex-direction: column;
-                    width: 40%;
-                    height: 100dvh;
-                    overflow: hidden scroll ;
-                    padding: 0 4rem;
-                    scroll-behavior: smooth;
+                    gap: 4rem;
 
                     & li{
-                        width: 100%;
+                        width: auto;
                     }
                 }
-
-                & .paginator{
-                    flex-direction: column;
-                    width: 8%;
-                }
-            }
-
-            & .about{
-                gap: 4rem;
-                padding: 0 24rem;
-            }
-
-            & .skill{
-
-                & ul{
-                    flex-direction: row;
-                    gap: 2rem;
-
-                    & li{
-
-                        & img{
-                            width: 8rem;
-                        }
-                    }
-                }
-
             }
         }
-
     }
+
 }
