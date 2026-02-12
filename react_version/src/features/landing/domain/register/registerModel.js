@@ -13,5 +13,6 @@ export function buildClient(registerData) {
         mail: registerData.mail,
         password: registerData.password,
         roleName: registerData.roleName,
+        wallet: registerData.wallet
     };
 }
