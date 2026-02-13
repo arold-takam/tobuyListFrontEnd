@@ -17,7 +17,7 @@ export default function MAccountPage() {
     const {isAuthenticated, error ,user} = useAuth();
     const {loading, deleteMAccount} = UseMADelete();
     const [activeMenu, setActiveMenu] = useState("");
-    const [passVisible, setPassVisible] = useState(false);
+
     const [priceVisible, setPriceVisible] = useState(false);
     const [cardColor, setCardColor] = useState(' ');
     
@@ -37,9 +37,7 @@ export default function MAccountPage() {
         setActiveMenu("");
     }
 
-    const handlePassShowing = () =>{
-        setPassVisible(!passVisible);
-    }
+
     const handlePriceShowing = () =>{
         setPriceVisible(!priceVisible);
     }
@@ -146,20 +144,13 @@ export default function MAccountPage() {
                                     <p>Numero de compte</p>
                                     <b>{account.phone}</b>
                                 </li>
-                                <li className="pass">
-                                    <div className="left">
-                                        <p>Password</p>
-                                        <b>{passVisible ? account.password : '*****'}</b>
-                                    </div>
-                                    <div className="right" onClick={handlePassShowing}>{passVisible ? <img src={eyeClose} alt="see button"/> : <img src={eyeOpen} alt="see button"/>}</div>
-                                </li>
                             </ul>
                         </div>
                     </section>
                     <section className="deleteAccount">
                         {loading?
                             <a onClick={delMAccount} disabled>
-                                <p>EN COURS DE SURPRESSION...</p>
+                                <p>EN COURS DE SUPPRESSION...</p>
                                 <img src={deleteIcon} alt="waste icon"/>
                             </a>
                             : <a onClick={delMAccount}>

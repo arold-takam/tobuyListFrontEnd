@@ -42,8 +42,9 @@
                 gap: 2rem;
                 width: 100%;
                 list-style: none;
-                overflow: scroll hidden;
+                overflow-x: scroll;
                 padding: 0 1rem;
+                scroll-snap-type: x mandatory;
                 scroll-behavior: smooth;
 
                 & li{
@@ -56,6 +57,7 @@
                     width: 90dvw;
                     height: 78dvh;
                     overflow: hidden;
+                    scroll-snap-align: center;
 
                     & figure{
                         display: flex;
